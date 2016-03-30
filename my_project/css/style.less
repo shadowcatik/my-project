@@ -1,0 +1,594 @@
+.radius (@radius) {
+
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+.transformation (@deg) {
+
+	-webkit-transform:rotate(@deg);
+	-moz-transform:rotate(@deg);
+	-o-transform:rotate(@deg);
+	-ms-transform:rotate(@deg);
+	transform:rotate(@deg);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	min-height: 100%;
+	background: url(../images/sea.jpg) repeat;
+	font-family: Georgia;
+	font-size: 18px;
+	color: #FFF;
+	position: relative;
+}
+
+#page {
+	min-height: 100%;
+	min-width: 1000px;
+	position: relative;
+}
+
+/*Titles*/
+
+@font: 'Georgia';
+
+@font_style: 'italic';
+
+.title {
+	font-size: 20px;
+}
+
+.title_small {
+	font-size: 25px;
+	font-family: @font;
+}
+
+.title_big {
+	font-family: @font;
+	font-size: 27px;
+	font-style: @font_style;
+}
+
+.title_large {
+	font-size: 30px;
+	font-style: @font_style;
+}
+
+/*Link*/
+
+.link {
+
+	color: #FFF;
+	text-decoration: none;
+	line-height: 19px;
+	position: absolute;
+	transition: color .4s ease-in;
+
+	&:hover {
+		color: rgb(244, 190, 88);
+	}
+}
+
+.link_item {
+
+	border-bottom: 1px dashed white;
+
+	&:hover {
+		border-bottom: 1px dashed rgb(244, 190, 88);
+	 }
+}
+
+/*Header*/
+
+.container {
+
+	margin: 0 auto;
+	position: relative;
+	width: 1000px;
+
+	&:after { 
+		content: ".";  
+		display: block;  
+		height: 0;  
+		visibility: hidden;  
+		clear: both;  
+	}
+}
+
+header {
+	background: url(../images/cloud.png) no-repeat scroll center top rgba(0, 0, 0, 0);
+	border-bottom: 3px dashed white;
+	min-width: 1000px;
+}
+
+/*Navigation*/
+
+.menu {
+	height: 210px;
+}
+
+.logo {
+	background: url(../images/logo.png) no-repeat center;
+	width: 143px;
+	height: 103px;
+	position: absolute;
+	top: 1px;
+	left: 50%;
+	margin-left: -70px;
+}
+
+.menu_link {
+
+	&:nth-of-type(2) {
+		top: 64px;
+		left: 50px;
+		width: 90px;
+	}
+
+	&:nth-of-type(3) {
+		top: 129px;
+		left: 255px;
+	}
+
+	&:nth-of-type(4) {
+		top: 154px;
+		left: 455px;
+		font-size: 25px;
+		line-height: 10px;
+	}
+
+	&:nth-of-type(5) {
+		top: 129px;
+		right: 213px;
+		width: 110px;
+	}
+
+	&:nth-of-type(6) {
+		top: 64px;
+		right: 50px;
+		font-size: 20px;
+	}
+}
+
+/*Appears welcome massage*/
+
+.welcome {
+	background: url(../images/welcome.png) no-repeat;
+	width: 397px;
+	height: 200px;
+	padding: 0 0 0 84px;
+	position: absolute;
+	margin-left: -170px;
+	bottom: -58px;
+	left: 50%;
+}
+
+.welcome_title {
+	color: #282828;
+	font-weight: 500;
+	display: inline-block;
+}
+
+.close {
+
+	border-radius: 50px;
+	border: 2px solid #898989;
+	width: 25px;
+	height: 25px; 
+	vertical-align: top;
+	margin: 7px 7px 0 0;
+	float: right;
+	position: relative;
+
+	&:before, &:after {
+		content: '';
+		height: 2px; 
+		width: 20px;
+		display: block;
+		background: #898989;
+		border-radius: 10px;
+		position: absolute; 
+		top: 11.5px; 
+		left: 2px; 
+		transform:rotate(-45deg);
+	}
+
+	&:after {
+		transform:rotate(45deg);
+	}
+
+	&:hover {
+		border: 2px solid rgb(188, 128, 14);
+	}
+
+	&:hover:after {
+		background-color: rgb(188, 128, 14);
+		border: 0px solid rgb(188, 128, 14);
+	}
+
+	&:hover:before {
+		background-color: rgb(188, 128, 14);
+		border: 0px solid rgb(188, 128, 14);
+	}
+}
+
+.welcome_info {
+	width: 371px;
+	margin-top: 13px;
+}
+
+.welcome_text {
+	font-family: Arial;
+	font-size: 13px;
+	color: #282828;
+	line-height: 17px;
+	margin: 12px 0 16px 24px;
+}
+
+.bye {
+	font-family: Arial;
+	font-size: 13px;
+	font-style: italic;
+	color: #282828;
+	margin-top: 17px;
+	display: inline-block;
+}
+
+.ship {
+	background: url(../images/ocean_text.png) no-repeat center top;
+	height: 168px;
+	margin: 8px 0 0 10px;
+}
+
+.ship_image {
+	margin: 3px 0 0 55px;
+}
+
+.point {
+	width: 0;
+	height: 0;
+	background: #FFFFFF;
+	padding: 5px;
+	display: inline-block;
+	left: 171px;
+	bottom: -6px;
+	position: absolute;
+
+	.radius(20px);
+}
+
+.direction {
+
+	overflow: hidden;
+	bottom: 3px;
+	position: relative;
+
+	&:before {
+		content: ''; 
+		height: 4px; 
+		width: 4px; 
+		display: block;
+		border: 2px solid #FFF; 
+		border-left-width: 0; 
+		border-top-width: 0; 
+		position: absolute; 
+		top: 0;
+		right: -14px;
+
+		.transformation(-45deg)
+	}
+
+	&:after {
+		content:''; 
+		height: 2px; 
+		width: 3px; 
+		display: block; 
+		background: #FFF; 
+		position: absolute; 
+		top: 2px; 
+		left: 7px;
+	}
+}
+
+.forward {
+	top: 21px;
+	left: 170px;
+	display: inline-block;
+	position: relative;
+}
+
+/*Content*/
+
+.main {
+	min-width: 1000px;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.content {
+
+	background: url(../images/island.png) no-repeat right -19px;
+	height: 490px;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+
+/*News*/
+
+.news {
+	width: 340px;
+	margin: 94px 0 0 51px;
+	float: left;
+}
+
+.news_title {
+	font-weight: 500;
+	color: white;
+}
+
+.first_column {
+	background: url(../images/first_column.png) no-repeat center;
+	width: 295px;
+	min-height: 125px;
+	margin-top: 12px;
+	background-color: #FFF;
+	border-radius: 15px;
+}
+
+.date {
+	margin: 17px 23px 5px 23px;
+	font-family: Arial;
+	color: #282828;
+	font-style: italic;
+	font-size: 12px;
+	display: inline-block;
+}
+
+.news_main {
+
+	display: inline-block;
+	margin: 0 16px 0 23px;
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 19px;
+	color: #006699;
+	transition: color .4s ease-in;
+
+	&:hover {
+		color: rgb(188, 128, 14);
+	}
+}
+
+.second_column {
+	background: url(../images/second_column.png) no-repeat center;
+	width: 295px;
+	min-height: 108px;
+	margin: 15px 0 0 42px;
+	background-color: #FFF;
+	border-radius: 15px;
+}
+
+.all_news {
+	margin: 17px 0 0 21px;
+}
+
+.news_link {
+
+	font-size: 18px;
+	margin-left: 9px;
+	color: white;
+	vertical-align: top;
+	transition: color .4s ease-in;
+
+	&:hover {
+		color: rgb(244, 190, 88);
+	}
+}
+
+/*Production*/
+
+.production_title {
+	text-align: center;
+	margin: -11px 0 13px 44px;
+}
+
+.production {
+	padding: 0 0 250px 0;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	min-height: 125px;
+}
+
+.product {
+
+	text-align: left;
+	padding: 18px 0 15px 8px;
+	width: 260px;
+	margin-top: 3px;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+
+.product_item {
+	width: 84px;
+	float: left;
+}
+
+.product_info {
+	width: 131px;
+	float: left;
+	margin: -2px 0 0 9px;
+}
+
+.product_title {
+	color: #006699;
+	font-weight: 500;
+	transition: color .4s ease-in;
+
+	&:hover {
+		color: rgb(188, 128, 14);
+	}
+}
+
+.product_description {
+	font-family: arial;
+	font-size: 11px;
+	color: #282828;
+	margin-top: 11px;
+	line-height: 16px;
+}
+
+/*Fish*/
+
+.fish {
+
+	background: url(../images/fish.png) no-repeat;
+	margin-left: 45px;
+
+	.product_item {
+		margin: 2px 0 0 4px;
+	}
+}
+
+/*Spreads*/
+
+.spreads {
+
+	background: url(../images/spreads.png) no-repeat;
+
+	.product_item {
+		margin: 1px 0 0 4px;
+	}
+
+	.product_description {
+		margin: 12px 0 0 3px;
+	}
+}
+
+/*Sea_production*/
+
+.sea_production {
+
+	background: url(../images/sea_product.png) no-repeat;
+	margin-right: 37px;
+
+	.product_item {
+		margin: 1px 0 0 4px;
+	}
+
+	.product_info {
+		margin: 4px 0 0 9px;
+	}
+
+	.product_description {
+		margin-left: 2px;
+	}
+}
+
+/*Footer*/
+
+.footer {
+
+	background: url(../images/menu_footer.png) no-repeat 49px bottom;
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 73px;
+	height: 170px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -500px;
+
+	.container  {
+		background: none;
+	}
+}
+
+.footer_menu_link {
+
+	&:nth-of-type(1) {
+		left: 50px;
+		top: 72px;
+		width: 90px;
+	}
+
+	&:nth-of-type(2) {
+		right: 674px;
+		top: 28px;
+	}
+
+	&:nth-of-type(3) {
+		left: 455px;
+		bottom: 192px;
+		font-size: 25px;
+		line-height: 10px;
+	}
+
+	&:nth-of-type(4) {
+		left: 677px;
+		top: 4px;
+		width: 110px;
+	}
+
+	&:nth-of-type(5) {
+		right: 50px;
+		top: 82px;
+		font-size: 20px;
+	}
+}
+
+.copyright {
+	position: absolute;
+	left: 50%;
+	margin-left: -124px;
+	margin-top: -90px;
+}
+
+@media screen and (max-width: 1060px){ 
+
+	.content {
+		background: url(../images/island.png) no-repeat 396px -19px;
+	}
+}
+
+
+@-moz-document url-prefix()
+{
+	.direction {
+		overflow: hidden;
+		top: 15px;
+		position: relative;
+	}
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+	.direction {
+		overflow: hidden;
+		top: 13px;
+		position: relative;
+	}
+}
+
