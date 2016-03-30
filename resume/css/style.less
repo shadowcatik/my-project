@@ -179,6 +179,10 @@ img {
     width: 1200px;
 }
 
+.row {
+    margin-bottom: 5rem;
+}
+
 
 /*Заголовки*/
 
@@ -189,7 +193,7 @@ img {
 
 .title_middle {
 	color: @color_theme_secondary;
-	font-size: 20px;
+	font-size: 26px;
 	font-weight: 700;
 	margin: 20px 0 50px 0;
 	border-bottom: 2px solid @color_theme;
@@ -331,7 +335,6 @@ i.icon {
 
 .bottom_line {
 	height: 30px;
-	display: inline-block;
 	position:relative;
 	margin: 5px 0;
 	background-color: @color_theme;
@@ -397,9 +400,9 @@ i.icon {
 }
 
 .experience_cell {
-	border-top: 4px double #444;
 	padding-top: 20px;
 	display: inline-block;
+	border-left: 4px double #444;
 
 	&:hover {
 		.icon-b {
@@ -431,10 +434,8 @@ i.icon {
 .main_skills {
 	padding-bottom: 15px;
 	font-weight: 700;
-	display: inline-block;
 
 	.bottom_line {
-		margin: 0;
 	}
 
 	.bottom_line:nth-of-type(2n) {
@@ -486,12 +487,16 @@ i.icon {
 }
 
 .gallery_item {
-	width: 238px;
+	width: 230px;
 	height: 266px;
 	display: inline-block;
 	margin: 20px 10px 0 0;
 	position: relative;
 	vertical-align: top;
+
+	&:nth-of-type(4n+4) {
+		margin: 20px 0 0;
+	}
 
 	&:hover {
 		box-shadow: 0 0 10px 4px @color_theme_main;
@@ -520,6 +525,11 @@ i.icon {
 
 section#contacts {
     padding: 50px 0;
+
+    .fa {
+	    font-size: 28px;
+	    color: #337ab7;
+    }
 }
 
 .contact {
@@ -530,16 +540,6 @@ section#contacts {
 .contact_item {
 	margin-left: 5px;
 	vertical-align: top;
-}
-
-.middle_item {
-	width: 32px;
-    height: 32px;
-    display: inline-block;
-}
-
-form {
-	margin-top: 50px;
 }
 
 .application_column {

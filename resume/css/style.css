@@ -129,6 +129,9 @@ img {
   padding: 50px 0 0 12%;
   width: 1200px;
 }
+.row {
+  margin-bottom: 5rem;
+}
 /*Заголовки*/
 .title_small {
   padding: 10px 0;
@@ -136,7 +139,7 @@ img {
 }
 .title_middle {
   color: #5997c6;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 700;
   margin: 20px 0 50px 0;
   border-bottom: 2px solid rgba(88, 12, 98, 0.36);
@@ -251,7 +254,6 @@ i.icon {
 }
 .bottom_line {
   height: 30px;
-  display: inline-block;
   position: relative;
   margin: 5px 0;
   background-color: rgba(88, 12, 98, 0.36);
@@ -309,9 +311,9 @@ i.icon {
   padding-top: 50px;
 }
 .experience_cell {
-  border-top: 4px double #444;
   padding-top: 20px;
   display: inline-block;
+  border-left: 4px double #444;
 }
 .experience_cell:hover .icon-b:before {
   background: #c2a7c6;
@@ -333,10 +335,6 @@ i.icon {
 .main_skills {
   padding-bottom: 15px;
   font-weight: 700;
-  display: inline-block;
-}
-.main_skills .bottom_line {
-  margin: 0;
 }
 .main_skills .bottom_line:nth-of-type(2n) {
   background-color: rgba(165, 99, 174, 0.83);
@@ -376,12 +374,15 @@ i.icon {
   background: url(../images/gift_shop.jpg) no-repeat;
 }
 .gallery_item {
-  width: 238px;
+  width: 230px;
   height: 266px;
   display: inline-block;
   margin: 20px 10px 0 0;
   position: relative;
   vertical-align: top;
+}
+.gallery_item:nth-of-type(4n+4) {
+  margin: 20px 0 0;
 }
 .gallery_item:hover {
   box-shadow: 0 0 10px 4px #c2a7c6;
@@ -406,6 +407,10 @@ i.icon {
 section#contacts {
   padding: 50px 0;
 }
+section#contacts .fa {
+  font-size: 28px;
+  color: #337ab7;
+}
 .contact {
   display: inline-block;
   margin-right: 6%;
@@ -413,14 +418,6 @@ section#contacts {
 .contact_item {
   margin-left: 5px;
   vertical-align: top;
-}
-.middle_item {
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-}
-form {
-  margin-top: 50px;
 }
 .application_column {
   width: 100%;
