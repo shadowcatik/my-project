@@ -1,0 +1,219 @@
+/*Подключаемые цвета*/
+
+@main_color: ;
+@main_color_two:;
+@other_color: ;
+
+/*Подключаемые стили*/
+
+.radial-gradient(@color, @color_two) {
+
+	background: -webkit-radial-gradient(center, closest-corner, @color, @color_two);
+	background: -moz-radial-gradient(center, closest-corner, @color, @color_two);
+	background: -o-radial-gradient(center, closest-corner, @color, @color_two);
+	background: -ms-radial-gradient(center, closest-corner, @color, @color_two);
+}
+
+.transform(@deg) {
+
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-o-border-radius: @radius;
+	-ms-border-radius: @radius;
+	border-radius: @radius;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+}
+
+body {
+	
+}
+
+p {
+
+}
+
+.container {
+	width: 1000px;
+	margin: 20% auto;
+}
+
+.background {
+	background: url(../images/nissa.png) no-repeat 50%;
+	width: 840px;
+	height: 600px;
+}
+
+.container_image {
+	position: relative;
+}
+
+.head_container {
+    position: absolute;
+    width: 311px;
+    height: 292px;
+}
+
+/*HEAD*/
+
+.h {
+	position: absolute;
+	.border-radius(40px);
+	border: 1px solid #000;
+}
+
+.h1 {
+    width: 81px;
+    height: 63px;
+    top: 176px;
+    left: 60px;
+    border-bottom-left-radius: 57px;
+    border-left-width: 0px;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    .border-radius(40px);
+}
+
+.h2 {
+    width: 59px;
+    height: 64px;
+    top: 186px;
+    left: 192px;
+    border-bottom-left-radius: 57px;
+    border-left-width: 0px;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    .border-radius(40px);
+    transform: scale(-1, 1);
+}
+
+.h3 {
+    width: 69px;
+    height: 33px;
+    bottom: 21px;
+    left: 96px;
+    transform: rotate(45deg);
+    border-bottom-right-radius: 473px;
+    border-top-right-radius: 76px;
+    border-bottom-width: 2px;
+}
+
+.h4 {
+    width: 69px;
+    height: 33px;
+    bottom: 15px;
+    left: 171px;
+    transform: rotate(144deg);
+    border-top-right-radius: 473px;
+    border-bottom-right-radius: 76px;
+    border-top-width: 2px;
+}
+
+.h5 {
+    width: 139px;
+    height: 138px;
+    bottom: 48px;
+    left: 24px;
+    transform: rotate(54deg);
+    border-bottom-right-radius: 29px;
+    border-top-width: 0;
+}
+
+.h6 {
+    width: 139px;
+    height: 138px;
+    bottom: 35px;
+    left: 136px;
+    transform: rotate(32deg);
+    border-top-right-radius: 29px;
+    border-right-width: 2px;
+}
+
+.h7 {
+    width: 140px;
+    height: 67px;
+    left: 90px;
+    top: 57px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 0px;
+}
+
+.h8 {
+    width: 28px;
+    height: 23px;
+    bottom: 0;
+    left: 150px;
+    border-radius: 30px 0 15px 0;
+    transform: rotate(45deg);
+}
+
+.h9 {
+    width: 70px;
+    height: 50px;
+    left: 128px;
+    top: 153px;
+    transform: rotate(51deg);
+}
+
+/*ears*/
+
+/*eyes*/
+
+.ey1 {
+    top: 174px;
+    left: 88px;
+    width: 46px;
+    height: 45px;
+    border: 1px solid #000;
+    border-radius: 40px;
+    transform: rotate(-27deg);
+    border-bottom-left-radius: 110px;
+    border-top-right-radius: 110px;
+}
+
+.ey2 {
+    top: 179px;
+    left: 98px;
+    width: 30px;
+    height: 32px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    transform: rotate(-27deg);
+    border-bottom-left-radius: 110px;
+    border-top-right-radius: 110px;
+}
+
+.ey3 {
+    top: 186px;
+    left: 113px;
+    width: 6px;
+    height: 17px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    transform: rotate(9deg);
+    border-bottom-left-radius: 110px;
+    border-top-right-radius: 110px;
+}
+/*eyebrows*/
+
+/*nose*/
+
+/*mustache*/
+
+/*lips*/
