@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/screen.css" />
+	<link rel="stylesheet" href="css/jquery.bxslider.css" />
+	<title>Мастерская сувениров</title>
+</head>
+<body>
+	<div id="page">
+		<ul class="menu">
+			<li class="menu_item">
+				<a href="#how_works" class="menu_link">
+					Как мы работаем
+				</a>
+			</li>
+			<li class="menu_item">
+				<a href="#examples" class="menu_link">
+					Примеры работ
+				</a>
+			</li>
+			<li class="menu_item">
+				<a href="#gallery" class="menu_link">
+					Галлерея
+				</a>
+			</li>
+			<li class="menu_item">
+				<a href="#share" class="menu_link">
+					Акция
+				</a>
+			</li>
+			<li class="menu_item">
+				<a href="#advantages" class="menu_link">
+					Предложение
+				</a>
+			</li>
+			<li class="menu_item">
+				<a href="#reviews" class="menu_link">
+					Отзывы
+				</a>
+			</li>		
+		</ul>
+		<header class="header container">
+			<span class="header_layout">
+				Мастерская авторских сувениров
+			</span>
+			<h3 class="title title_large">
+				Сувениры от Татьяны
+			</h3>
+			<div class="contacts">
+				<div class="phone">
+					8 906-654-64-70
+				</div>
+				<a href="#" id="callback">
+					Заказать звонок
+				</a>
+			</div>
+			<div class="b-callback" style="display: none">
+                <div class="b-callback-inner">
+                    <a class="b-callback-close" aria-label="Close">×</a>
+                    <h4 class="b-callback-title">Заказать звонок</h4>
+		            <form id="callback-form">
+		              <div class="b-callback-text-wrap">
+		                <input type="text" class="application_cell" name="name" required placeholder="Ваше имя"/>
+		              </div>
+		              <div class="b-callback-text-wrap">
+		                <input id="phone" type="text" class="application_cell" name="phone" required placeholder="Ваш телефон"/>
+		              </div>
+		              <div class="b-callback-text-wrap">
+		                <input type="text" class="application_cell" name="email" required placeholder="Ваш Email"/>
+		              </div>
+		              <div class="b-callback-text-wrap">
+		                <input type="text" class="application_cell" name="time" placeholder="Удобное время для звонка"/>
+		              </div>
+		              <div class="b-callback-button-wrap">
+		                <input type="submit" class="b-callback-button" value="ПОЗВОНИТЬ МНЕ"/>
+		              </div>
+		            </form>
+                </div>
+            </div>
+		</header>
+		<main class="content g-content">
+			<div class="container">
+				<h3 class="title title_big">
+					Галлерея
+				</h3>
+				<section class="slide_wrapper g-slide_wrapper">
+					<a href="">
+						<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
+						<h4 class="title title_middle">
+							Матрешки
+						</h4>
+					</a>
+				</section>
+				<section class="slide_wrapper g-slide_wrapper">
+					<a href="">
+						<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
+						<h4 class="title title_middle">
+							Матрешки
+						</h4>
+					</a>
+				</section>
+				<section class="slide_wrapper g-slide_wrapper">
+					<a href="">
+						<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
+						<h4 class="title title_middle">
+							Матрешки
+						</h4>
+					</a>
+				</section>
+				<section class="slide_wrapper g-slide_wrapper">
+					<a href="">
+						<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
+						<h4 class="title title_middle">
+							Матрешки
+						</h4>
+					</a>
+				</section>
+				<section class="slide_wrapper g-slide_wrapper">
+					<a href="">
+						<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
+						<h4 class="title title_middle">
+							Матрешки
+						</h4>
+					</a>
+				</section>
+				<section class="slide_wrapper g-slide_wrapper">
+					<a href="">
+						<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
+						<h4 class="title title_middle">
+							Матрешки
+						</h4>
+					</a>
+				</section>
+				<section class="slide_wrapper g-slide_wrapper">
+					<a href="">
+						<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
+						<h4 class="title title_middle">
+							Матрешки
+						</h4>
+					</a>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<a href="http://f0002611.xsph.ru/" class="copyright">
+					Оксана Мельник
+				</a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<script src="js/masked_input.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $('.bxslider').bxSlider({
+				minSlides: 3,
+				maxSlides: 4,
+				slideWidth: 260,
+				moveSlides: 1,
+		  });
+		  $('.rvslider').bxSlider({
+			  	pager:false,
+				minSlides: 1,
+				maxSlides: 1,
+				slideWidth: 400,
+				moveSlides: 1,
+		  });
+		});
+		jQuery(function($){
+        	$("#phone").mask("+7 (999) 999-9999");
+        });
+	</script>
+</body>
+</html>
