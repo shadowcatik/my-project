@@ -134,7 +134,7 @@ a {
 
 .container {
 	width: 90rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
 	position: relative;
 	.flex;
     justify-content: space-between;
@@ -217,6 +217,7 @@ a {
 
 .menu_item {
 	margin-right: 5rem;
+	position: relative;
 
 	&:last-of-type {
 		margin: 0;
@@ -234,12 +235,37 @@ a {
 	}
 }
 
+.menu_dropdown {
+	position: absolute;
+	top: 4rem;
+	left: -2rem;
+	background-color: @color_theme_main;
+	padding: 2rem;
+}
+
+.menu_dropdown {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.menu_dropdown_item {
+	display: list-item;
+	margin-bottom: 2rem;
+
+	&:last-of-type {
+		margin: 0;
+	}
+}
+
 /*шапка*/ 
 
 .header {
     .flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-flow: row wrap;
     padding: 9rem 0 0;
 }
@@ -273,10 +299,6 @@ a {
 	align-items: center;
 	flex-flow: column wrap;
     padding-bottom: 4.7rem;
-}
-
-.g-content {
-	padding-top: 10rem;
 }
 
 .home {
@@ -410,10 +432,6 @@ a {
  }
 
 /*Акция*/
-
-.share {
-    padding-bottom: 5rem;
-}
 
 .share_info {
     width: 45.8rem;
@@ -658,7 +676,6 @@ color: @color_theme !important;
 /*Отзывы*/
 
 .reviews {
-	padding-bottom: 5rem;
 
 	.order_form {
 		padding: 2rem;
@@ -690,7 +707,6 @@ color: @color_theme !important;
 /*Примеры работ*/
 
 .examples {
-	padding-bottom: 5rem;
 
 	.button {
 		height: 2.3rem;
