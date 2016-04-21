@@ -101,6 +101,12 @@
   font-weight: normal;
 }
 /* Цвета */
+.flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
 * {
   margin: 0;
   padding: 0;
@@ -117,6 +123,7 @@ a {
 }
 a:hover {
   text-decoration: none;
+  color: #333;
 }
 img {
   vertical-align: inherit;
@@ -142,10 +149,31 @@ img {
   font-size: 26px;
   font-weight: 700;
   margin: 20px 0 50px 0;
-  border-bottom: 2px solid rgba(88, 12, 98, 0.36);
+  width: 100%;
+}
+.border {
+  overflow: hidden;
+}
+.border:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1rem;
+  -webkit-transform: translateZ(0) translate(-100%);
+  transform: translateZ(0) translate(-100%);
+  -webkit-transition: transform 0.7s ease-out 0s;
+  transition: transform 0.7s ease-out 0s;
+}
+.border_bottom:after {
+  background-color: #000;
+}
+.border_bottom.active:after {
+  -webkit-transform: translateZ(0) translate(-10%);
+  transform: translateZ(0) translate(-10%);
 }
 .title_large {
   color: #ffffff;
+  text-align: center;
 }
 /*Шапка*/
 .header {
@@ -191,11 +219,23 @@ img {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
 }
 .welcome {
-  margin: 0 auto;
-  width: 427px;
-  padding-top: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  flex: 1 1 100%;
+  align-items: center;
 }
 .welcome .title_middle {
   border: 0;
@@ -208,6 +248,8 @@ img {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
+  flex: 0 1 5rem;
+  width: 17rem;
 }
 /*Резюме*/
 .resume_column {
