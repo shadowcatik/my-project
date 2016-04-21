@@ -216,7 +216,7 @@ a {
 }
 
 .menu_item {
-	margin-right: 5rem;
+	margin-right: 7rem;
 	position: relative;
 
 	&:last-of-type {
@@ -740,6 +740,27 @@ color: @color_theme !important;
     margin-bottom: 2rem;
 }
 
+.gallery {
+	    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-flow: row wrap;
+}
+
+.gallery_item {
+	flex: 1 1 20rem;
+    position: relative;
+    text-align: center;
+	margin: 1rem;
+
+	img {
+		width: 100%;
+	}
+}
+
 /*Футер*/
 
 .footer {
@@ -763,3 +784,7 @@ color: @color_theme !important;
 .copyright {
 	color: @color_theme;
 }
+
+.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+}		
