@@ -4,9 +4,9 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9q6i63gajd8pQeoCrtrnoerhR4d6NYeM"  type="text/javascript"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -96,13 +96,14 @@
 		</div>
 		<div class="container">
 			<section id="resume">
-				<h3 class="title_middle active">
+				<h3 class="title_middle animated">
 					Резюме
-					<div class="border border_bottom fadeInLeft animated"></div>
 				</h3>
 				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-5 col-xs-4 resume_column">
-						<i class="icon-bubble"></i>
+					<div class="resume_column">
+						<div class="swing">
+							<i class="icon-bubble"></i>
+						</div>
 						<article>
 							<h4 class="title_small">
 								Обо мне
@@ -115,8 +116,8 @@
 							</p>	
 						</article>
 					</div>
-					<div class="col-lg-5 col-md-4 col-sm-5 col-xs-4 resume_column">
-						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAPK0lEQVR4XtWbwW8kRxXGq7rbUW5xBBIntDbnSPEKOCAkMpvucI1XXIBLvP8AsbkgLuzugRNC60VwRLFv3NYW3NydTBBHUBwhwTE2Elyze0AocncX+pXeG9X0VHWPvbtIjLTa3Zme7qpX733ve997Y81Lfs1ms808z9+z1m4ZY07rup6PPXI2m21tbGzcurq6upzP5xcveXnGvuwHlGV5bq19U5/jnLvbNM1J7LllWe5aa58En83rur7zMtf40g1QVZVzzl0aY56KF2CQ/bOzs/PhxqqqeuCcw1OMXLtT1/Xm/60BZEO7XdfN5vP5UzZSVRUhsOOc2xt6QlVVM+fcpr7P9+u6fvB/aYCqqvaNMTNjzKZz7oOu606LorhvjLl0zu1Ya8/ruj6MeQHvYYgsy45invIiDXKjEHjnnXd2+r5nM0+bprmXimcM0HXdgzzPf2yM+Wbf9/8siuLXV1dXF+oR4Xe5r3PukXPuwlp7Udf1w6nNvv3223vW2kesJcuyu9c12LUNEAKVc+5T59zhhx9+eJRaKKie5/kn1lofy845FnpnuFAx6kd6Hdf2fX8vdm/WYIz5wFrL87nvprX2Fvfuum47ZtzU+m5iAE7nli6uLMvDpmlw9+irqioQn1B4TS44cM7tZ1m2q0aQVPmJMeZja+17ct0zPKFpmp3hjTn1PM/PMX5d17NB9rgzlWrD+93EAIfW2qeAEwsvimIvFssCeIAa1+MhuCkecJJl2cO+7wFBbzgx0pwMYK19Xxb4sfwNEEa5Q1mWR4QYfEGMcNS27c51+MO1DSAL9sjc9/2r1tqvWGv3nHNH1trjcLGguLX2BCMYY94KLH8QGo0wYdGSIfx1zrnHfBdjh55SFAWf41Gzvu//YYz5UpZlZ5I+73RdhwF8xlnndSMD6I3LsvThoLENwgt4EaP+xeaKovgsXIzE6u3hSQ1I08NhChRP8TiioeKc+6tz7ld5nv+573sMhkeOss3nCoHwy5CcgZUP2rY9CTcm6RCg4tQ4mU3iNnY6uLQQpp22bXdjJymof1+Ikt7moXjag7Zt9164B6iLDheNB/Be6AVd162cbBg2xpj7dV1HPY8QcM7BFLfqul54UYAnT8IsIQzTh8lNCdPKQgSRHylthbHxUGvt7WHqEg+Aq3+Uiu8gXOD5YMWOMMOlQkcAFQ8A3WGDK5lFvMmDqYTdMSHHv1+YAYZxqIzs6urq6TBmMQCnSSoEvZ1zx9DcWOoiz7PQ2H3WAavAiwgf7kVahSjN+77fGuMigkWbsdBY8gC4eHCaHoRwS+Iqz/O38ApO0BhzHPJ4To+8TpEjJ/JZXdcHw42Jd70r9yHl+cJHmR9/Q5ljC5U6AQ/B5VkHeHKSqiz12UKwqDBZ4woBWzJAgNgQEl+xSVyyWJiWT01t254nFknKuyCOwxMpyxI9AJf2XgCDJG4FFHmLeoEw07LZk5ymafAo/wL8siwDTAE60uZSqhMafctaexmGKsAqPIS1fd40zfZoFhCU5SSfSNHyH2PMD2ThpB8tY58NgYpFhC7OxlmwnBibOem6bp5C6cCTZqQ5jMn31RCySbLISpoT79XKkZric+fcz40xLYehHGOIZUk0FktfFEWB24UkRgHocYoCi6vD1UHyU+fck/A0JSY9+UnFv9QQGA9DYLh7U+lNvASja5olq1zCFrMsm2VZxpqWwDxlAPj7a6gxgUfgcsrSVOD4HCAKT0RO6QNxdxbwGGMCVvyx1t53zhFinNJm13Xk+6QhlOIaYz6z1t6LVXtaSwy4gR7Ud6y1X+c/bdseDY2YZIJshIdJerqAYxdFgfuDvhQq5GRq+62mafZ4wLCiE3rsP5MQ8kxRDAIWQJFx8ahEpt/TYmfIIMXY71JcCQtdSG/6vKZpPNCmXmtRYYDEOTcXENqFycHzjTH7WnyIoeADYfWGwfT/CKKe3Eg8IpURRsnNK6ao4QU8Xdu2dzhJKYvBi6fOOS+84vLOOUKHP5O0eC0DhNZTzxjGsXKBoaVZNCiP51hrCQcWC5UF+Ul7bGYlBCA9gDDXZlnmJTQBYHTDIxViJEtRk4D2vnBSNWoI0jEvuLYBYjcJ+MOzoO5Xtwc7eJ8XRvAbxxhsMMuyw5G4/pG19tvGmO9Gnuvr/hRNH3P78DOriC1vLhGcAFWXgG5486qqcP1ogSOxCH8AMKHN6IE/NMb8C2kM74h5gMY3GCGuTxjiBRrnk5I5e1PQk70AzkuluA0+8LRSCAmxhObH695YnA7YY9LwpDJjzHaoEI+dUlVVeA4e49OWhBjhA2FS0SSp/gTM8VHTNI8xxsbGxlbf94A3xkQ+O4bHEzvkTn8zBbfQlcVlETtWJGopYf3pa1WY2Niz66g1VVUhjsJACZlPu647xFOCjfjCSTOQPlM2zkmT+71mCfm01iLFHYpCRWZ6F45iZcP327bdLopiq23bbxRF8YvYJkSIOO/7/lipblmWiB2nqvyEXSA0PgkB8v2iNzAVnwmvgh4TMqA+m0JuIwUvUVvJRoSbF07kYDCirxylvuEgvYeDASg2WASJ6ajv+3mQ78O1ktI0ZX2sACRqz522bWGNfmF4T9gCCzPH1Oa1eImRmth3OTjRBLUFtwLE8r2/OOf+BHsVZQn+cBnNArIILy+J7IzVPWDJBr1QqSelAkdIX3mPz1OFU8oQQUhO2Uo/D0MXbkHYhOSLwgsy5D0IMBYcuetBNfUUQWFq7f1hra3oqgJFqPDI93Ax3O5N59zBVK0eriEURte0gJbtHp+oRLUA4+++7+lDoFfMBEzBPELdS26jPGBY3UXSHykKeTtKN4XCwsZ2Jdu82bYtZMik+H+KUI0YY0U85blZlnlyBYPVzWuPQv/vMWBNK0cvUwBNaXx8ScKJ8lobHl4AybJs7+zsTLX/xf2Fl7BovEeLriWOP1jMigH0c80YY+2y5zWAV5DGDMBiqqoCcWNd3rW6OGNcI9U+W/dgkwaQk5hBglJ0UxemSJx6aEQ+95cKKHkVCbIygUe0zmKvtYyYuvfCAEp727a9CzhIvJBaTvq+/wi5G54gVZfvAGnOnTqFsIFynVheBxxT3idre6uu69Mxb1gYQBZJb+2wKArf2xcWhYqiUxrErNfugyEGzw3GKi/JDKkT9OuLye7hwgPKHr4NH/EslPQZFlYBlhylepf+udoHMMbcJtc7535prf1jxGqqBW7D65WC6sLatn19TLIKlB3tEi8eAdhNCReJ9OgLGzltymeKJc3z8Jhj2mVhJ3q4r0UtgBtzcVEUxOTXrLVfXbk40hxRxcgYQ6t6dJxFs8bwviKMJFvscsLDASpqC68Oa/2CSiWzAouuktBhCh86VitNU9ia9ve8NWWu5w1r7ffg8gH/pgkaBRz5zvtTwwkxA0wBqBorEkZL6U8VZcJgqEkI4H7fWou67cNZeogXeIB2eH08AX5ffPHFz1555RXGWnya67puMaoSIzASRoTIJ03T3E2BTiSOr1UhatdKlN5oG1xkMrwFL/Dhpj1EqQO0+eMNiAG4mNKSAgYXWdT/Glt9319M0dkgVyeJSWQOcEmcmMrdZVkCyMT5Sp8y/K54C8TLhxXhnWUZDdcHQa3hn73EAwL1dRKUpPB5FOr1esKptCieQvmMcDk6WzQ0hm5e7829uCbRoWLjfI5q5Jso2lkSPdIqfsS6wysNC+kNQIr25N+41oEoK4uUKGDlG6UCiiv9QcGcRfqaOnW5pz/50LDUDHht13X+GaTuKRCWQyNbLFp3a1FhSUHke1QU+AH6PuoKFBcdcQnBxdoskOmwg5CLBwLMaNpkUxJWtMO3w6pUqlB6layfUh0BhNJ7O8/z+XXGZCYNoA1TUYMWY6vIVFLQrIy8sniJQz8bhIydZdljNYSc3jylNYqshc6PHrHyHAklPI2CCRDXtAdYI6Ejm482W9TzJg0QK08FVfeHD9HKr+u6/VCNlSYFJ8Zi4RnnWq7qQvq+Ry2GagPKiwbHGPgO06pKdhgNr1QhdSw0Ur1BP4UlKeTv1trf6UIhLTKatkIqBGFhk3vDKRAxDkoNG/SDVRFCRBOFDtTKiKyoS0yYLpooIzWGxxjxXkZykwPXKwYIcnUoNb1qjPmJnCAbp921SGGiDMP1AaS1Z3YkxiElSxsLDSObAG+QxOcRdYpJVLxHlV7Tdd1v8zz/smQCpliSI/crBlDGxQObpnkdwLHWzmOigihGiKHEG51j8GA7NsAQ9vGkS7s4SUlp/LCC+SGGL5ZaZQLCFGEr6pOEgbbvEXZ/n2VZT3EmqM+BnKTCYGw+gJuSQ+3EWBsPIAuEMwQoOjH053BXpsQ0zQJmMXcVfsIMkhc3YZsxwRVD0nXK8/xviLF5ntMg5XvoDUvy+SgICsp6YTMEtGHMivWhmrCzMK4fUlaHJEX1BbBlaNDBdMfKaOywDoAJams9MZmKVgngagdp0Zke7mEyC8TAKlCF4QSL2T1NWUxthRlCcUUxpK7r28M4z/OcSXHiHBGGxZ8ORmQJC+X2NDlQdhmKXISLlszSS8RboPd0lZJNmRsZAPSlBx9poujA86fEoM70SEbxnRhJUYsZgkh94IuXUB8QXkD20BP1XR8wah0mOXbNjQxA41KmP9jIv51zV5IZmOXxPTyhsLponqPjNZye7/SqqKKdmmChnt4ydsvfeZ6DM57tBddci06njHBTA4AP/KBJJz5Y4IPYL0FknNbPBYgHMC3GwNIu1zOE1bbt/qAdR9piHG8xDhc2bVNE7Cbe8DwGYNjJT4oJiGmH+GTA/ckQ4XjrZShR6RAWi9fGqogwB0OmKWntDcoEuV5xYO3x+BcCgtoSE+oJHviuLZMgQwaoGYWpMKkLVn43GOkHJlEbT9AMo9xi7BcrU15xIw8Iuzfq1sM+vT5YQI4CZSs2DqM9h7Isf2qM+ZYxZqPrut/M5/M/oAAN547h9+BMURTkd9IvPOXGvy28kQHYnGpw/DtVsKiipCyMk44MNDB9qhI8p3sBgZGpNITWpc0NsgatcMjT2j+QeCEhMOVW+rlOa0gFSJgwSb70MzupIxjE9hMoYjRf0qbG3AhBur6o2FPTo1NrvbEHTN2Yz7XFHqi0zBevuGsolgqe8PXT54ntddbngXTdC5/nOnFbEHvp5zThPa/zI+vnWcv/NASus1BxfRQgKGxSLbrOPde59r+ghL6/aNMLLwAAAABJRU5ErkJggg==" alt="peace" />
+					<div class="resume_column">
+						<img class="icon_peace" src="data:image/png;base64,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" alt="peace" />
 						<h4 class="title_small">
 							Языковые знания
 						</h4>
@@ -153,33 +154,39 @@
 							</div>
 						</div>	
 					</div>
-					<div class="col-lg-3 col-md-4 col-sm-5 col-xs-4 resume_column">
-						<i class="icon-music"></i>
+					<div class="resume_column">
+						<div class="swing">
+							<i class="icon-music"></i>
+						</div>
 						<h4 class="title_small">
 							Хобби и интересы
 						</h4>
 						<div class="column">
-							<i class="icon-music icon"></i>
+							<div class="icon spin circle">
+								<i class="icon-music"></i>
+							</div>
 							<p class="main_idea">
 								Музыка
 							</p>
 						</div>
 						<div class="column">
-							<i class="icon-film icon"></i>
+							<div class="icon spin circle">
+								<i class="icon-film"></i>
+							</div>
 							<p class="main_idea">
 								Сериалы
 							</p>
 						</div>
 						<div class="column">
-							<i class="icon-steam2 icon"></i>
+							<div class="icon spin circle">
+								<i class="icon-steam2"></i>
+							</div>
 							<p class="main_idea">
 								Игры
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-6 col-md-4 col-sm-5 col-xs-4 resume_column">
+					<div class="resume_column">
 						<i class="icon-library"></i>
 						<h4 class="title_small">
 							Образование и опыт работы
@@ -283,136 +290,140 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-4 col-sm-5 col-xs-4 resume_column">
-						<i class="icon-briefcase"></i>
+					<div class="resume_column">
+						<div class="swing">
+							<i class="icon-briefcase"></i>
+						</div>
 						<h4 class="title_small">
 							Навыки
 						</h4>
-						<div class="main_skills">
-							Code Skills
-							<div class="bottom_line">
-								<p>
-									HTML/CSS 
-								</p>
+						<div class="skills">
+							<div class="main_skills">
+								Code Skills
+								<div class="bottom_line">
+									<p>
+										HTML/CSS 
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										HTML5
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										LESS/Sass
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										GitHub
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Git
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Bitbucket
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										SVG
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Валидная верстка
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Адаптивная верстка
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Java Script
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										jQuery
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										SEO-оптимизация
+									</p>
+								</div>
 							</div>
-							<div class="bottom_line">
-								<p>
-									HTML5
-								</p>
+							<div class="main_skills">
+								Software Skills
+								<div class="bottom_line">
+									<p>
+										Adobe Photoshop
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										CorelDRAW
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Adobe Flash
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Pinnacle
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Sony Vegas
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										3D Home Architect
+									</p>
+								</div>
 							</div>
-							<div class="bottom_line">
-								<p>
-									LESS/Sass
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									GitHub
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Git
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Bitbucket
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									SVG
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Валидная верстка
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Адаптивная верстка
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Java Script
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									jQuery
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									SEO-оптимизация
-								</p>
-							</div>
-						</div>
-						<div class="main_skills">
-							Software Skills
-							<div class="bottom_line">
-								<p>
-									Adobe Photoshop
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									CorelDRAW
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Adobe Flash
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Pinnacle
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Sony Vegas
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									3D Home Architect
-								</p>
-							</div>
-						</div>
-						<div class="main_skills">
-							 Professional Skills
-							<div class="bottom_line">
-								<p>
-									Comunication
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Leadership
-								</p>
-							</div>
-							<div class="bottom_line">
-								<p>
-									Confidence
-								</p>
+							<div class="main_skills">
+								 Professional Skills
+								<div class="bottom_line">
+									<p>
+										Comunication
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Leadership
+									</p>
+								</div>
+								<div class="bottom_line">
+									<p>
+										Confidence
+									</p>
+								</div>
 							</div>
 						</div>			  
 					</div>
 				</div>
 			</section>
 			<section id="portfolio">
-				<h3 class="title_middle">
+				<h3 class="title_middle animated">
 					Портфолио
 				</h3>
 				<h4 class="title_small">
 					Мои последние работы
 				</h4>
-				<div class="gallery">
+				<div class="row">
 					<a href="http://f0002611.xsph.ru/santa_bremor/index.html" class="gallery_item santa_bremor">
 						<h5 class="gallery_title title">
 							Санта-Бремор
@@ -437,20 +448,18 @@
 				</div>
 			</section>
 			<section id="contacts">
-				<h3 class="title_middle">
+				<h3 class="title_middle animated">
 					КОНТАКТЫ
 				</h3>
 				<div class="contact">
-					<i class="fa fa-map-marker"></i>
-					<span class="contact_item">
-						Россия, Тверь
-					</span>
+					<div id="map"></div>
 				</div>
 				<div class="contact">
-					<i class="fa fa-envelope-square"></i>
-					<span class="contact_item">
+					
+					<a href="mailto:kyoshiniimura@gmail.com" class="contact_item">
+						<i class="fa fa-envelope-square"></i>
 						kyoshiniimura@gmail.com
-					</span>
+					</a>
 				</div>
 				<div class="contact">
 					<i class="fa fa-skype"></i>
@@ -463,5 +472,27 @@
 	</div>
 	<script src="js/jquery-1.12.1.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		var myCenter=new google.maps.LatLng(56.85872140000001,35.9175965);
+
+		function initialize()
+		{
+		var mapProp = {
+		  center:myCenter,
+		  zoom:11,
+		  mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+
+		var map=new google.maps.Map(document.getElementById("map"),mapProp);
+
+		var marker=new google.maps.Marker({
+		  position:myCenter,
+		  });
+
+		marker.setMap(map);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </body>
 </html>
