@@ -4,32 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/screen.css" />
-	<link rel="stylesheet" href="css/jquery.bxslider.css" />
-
 	<!-- Add jQuery library -->
 	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-
 	<!-- Add mousewheel plugin (this is optional) -->
 	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-
 	<!-- Add fancyBox main JS and CSS files -->
 	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
 	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
-
 	<!-- Add Button helper (this is optional) -->
 	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
 	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-
 	<!-- Add Thumbnail helper (this is optional) -->
 	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
 	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
 	<!-- Add Media helper (this is optional) -->
 	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-
-	<title>Мастерская сувениров</title>
+	<script src="js/main.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {		
 			$('.fancybox').fancybox();
@@ -136,192 +126,158 @@
 			});
 		});
 	</script>
+	<title>Мастерская авторских сувениров</title>
 </head>
 <body>
 	<div id="page">
-		<ul class="menu">
-			<li class="menu_item">
-				<a href="index.html#how_works" class="menu_link">
-					Как мы работаем
-				</a>
-			</li>
-			<li class="menu_item">
-				<a href="index.html#examples" class="menu_link">
-					Примеры работ
-				</a>
-			</li>
-			<li class="menu_item" >
-				<span class="menu_link" id="show__menu">
-					Галерея
-				</span>
-				<ul id="menu" class="menu_dropdown">
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li class="menu_item">
-				<a href="index.html#share" class="menu_link">
-					Акция
-				</a>
-			</li>
-			<li class="menu_item">
-				<a href="index.html#advantages" class="menu_link">
-					Предложение
-				</a>
-			</li>
-			<li class="menu_item">
-				<a href="index.html#reviews" class="menu_link">
-					Отзывы
-				</a>
-			</li>		
-		</ul>
-		<header class="header container">
-			<span class="header_layout">
-				Мастерская авторских сувениров
-			</span>
-			<h3 class="title title_large">
-				Сувениры от Татьяны
-			</h3>
-			<div class="contacts">
-				<div class="phone">
-					8 906-654-64-70
-				</div>
-				<a href="#" id="callback">
-					Заказать звонок
-				</a>
-			</div>
-			<div class="b-callback" style="display: none">
-                <div class="b-callback-inner">
-                    <a class="b-callback-close" aria-label="Close">×</a>
-                    <h4 class="b-callback-title">Заказать звонок</h4>
-		            <form id="callback-form">
-		              <div class="b-callback-text-wrap">
-		                <input type="text" class="application_cell" name="name" required placeholder="Ваше имя"/>
-		              </div>
-		              <div class="b-callback-text-wrap">
-		                <input id="phone" type="text" class="application_cell" name="phone" required placeholder="Ваш телефон"/>
-		              </div>
-		              <div class="b-callback-text-wrap">
-		                <input type="text" class="application_cell" name="email" required placeholder="Ваш Email"/>
-		              </div>
-		              <div class="b-callback-text-wrap">
-		                <input type="text" class="application_cell" name="time" placeholder="Удобное время для звонка"/>
-		              </div>
-		              <div class="b-callback-button-wrap">
-		                <input type="submit" class="b-callback-button" value="ПОЗВОНИТЬ МНЕ"/>
-		              </div>
-		            </form>
-                </div>
-            </div>
-		</header>
-		<main class="content g-content">
+		<div class="top_menu">
 			<div class="container">
-				<h3 class="title title_big">
-					Матрешки
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="button__menu_icon" id="show__menu" width="32" height="32" viewBox="0 0 32 32">
+					<path fill="#444" d="M8 8v4h16v-4h-16zM8 18h16v-4h-16v4zM8 24h16v-4h-16v4z"></path>
+				</svg>
+				<nav id="menu" class="menu">
+					<li class="menu_item">
+						<a href="index.html" class="menu_link">
+							Главная
+						</a>
+					</li>
+					<li class="menu_item" >				
+						<a href="gallery.html" class="menu_link">
+							Галерея
+						</a>
+					</li>
+					<li class="menu_item">
+						<a href="index.html#how_works" class="menu_link ">
+							Как заказать
+						</a>
+					</li>
+					<li class="menu_item">
+						<a href="index.html#reviews" class="menu_link">
+							Отзывы
+						</a>
+					</li>		
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<header class="header">
+				<span class="header_layout">
+					Мастерская авторских сувениров
+				</span>
+				<h3 class="title title_large">
+					Сувениры от Татьяны
 				</h3>
-				<div class="gallery">
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
+				<div class="contacts">
+					<div class="phone">
+						8 906-654-64-70
+					</div>
+					<a href="index.html#share" id="callback">
+						Заказать звонок
 					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
-					</a>
-					<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-						<img src="images/matryoshka_elk.jpg" alt="" />
+					<a href="https://vk.com/club41471980" class="button button_contact">
+						Мы в Вконтакте
 					</a>
 				</div>
-			</div>
-		</main>
+				<div class="b-callback" style="display: none">
+	                <div class="b-callback-inner">
+	                    <a class="b-callback-close" aria-label="Close">×</a>
+	                    <h4 class="b-callback-title">Заказать звонок</h4>
+			            <form id="callback-form">
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="name" required placeholder="Ваше имя"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input id="phone" type="text" class="application_cell" name="phone" required placeholder="Ваш телефон"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="email" required placeholder="Ваш Email"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="time" placeholder="Удобное время для звонка"/>
+			              </div>
+			              <div class="b-callback-button-wrap">
+			                <input type="submit" class="b-callback-button" value="ПОЗВОНИТЬ МНЕ"/>
+			              </div>
+			            </form>
+	                </div>
+	            </div>
+			</header>
+			<main class="content g-content">
+				<div class="container">
+					<h3 class="title title_big">
+						Куклы
+					</h3>
+					<div class="gallery">
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+						<a class="gallery_item fancybox-effects-c" href="images/matryoshka_elk.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/matryoshka_elk.jpg" alt="" />
+						</a>
+					</div>
+				</div>
+			</main>
+		</div>
 		<footer class="footer">
 			<div class="container">
 				<a href="http://f0002611.xsph.ru/" class="copyright">
@@ -330,6 +286,5 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/main.js"></script>
 </body>
 </html>

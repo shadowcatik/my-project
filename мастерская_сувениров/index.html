@@ -4,167 +4,163 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/screen.css" />
 	<link rel="stylesheet" href="css/jquery.bxslider.css" />
-	<title>Мастерская сувениров</title>
+	<title>Мастерская авторских сувениров</title>
+	 <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<div id="page">
-		<ul class="menu">
-			<li class="menu_item">
-				<a href="#how_works" class="menu_link ">
-					Как мы работаем
-				</a>
-			</li>
-			<li class="menu_item">
-				<a href="#examples" class="menu_link">
-					Примеры работ
-				</a>
-			</li>
-			<li class="menu_item" >
-				<span class="menu_link" id="show__menu">
-					Галерея
-				</span>
-				<ul id="menu" class="menu_dropdown">
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
+		<div class="top_menu">
+			<div class="container">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="button__menu_icon" id="show__menu" width="32" height="32" viewBox="0 0 32 32">
+					<path fill="#444" d="M8 8v4h16v-4h-16zM8 18h16v-4h-16v4zM8 24h16v-4h-16v4z"></path>
+				</svg>
+				<nav id="menu" class="menu">
+					<li class="menu_item">
+						<a href="#" class="menu_link">
+							Главная
 						</a>
 					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
+					<li class="menu_item" >				
+						<a href="gallery.html" class="menu_link">
+							Галерея
 						</a>
 					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
+					<li class="menu_item">
+						<a href="#how_works" class="menu_link ">
+							Как заказать
 						</a>
 					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
+					<li class="menu_item">
+						<a href="#reviews" class="menu_link">
+							Отзывы
 						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
-					<li class="menu_dropdown_item">
-						<a href="" class="menu_link">
-							Матрешки
-						</a>
-					</li>
+					</li>		
 				</ul>
-			</li>
-			<li class="menu_item">
-				<a href="#share" class="menu_link">
-					Акция
-				</a>
-			</li>
-			<li class="menu_item">
-				<a href="#advantages" class="menu_link">
-					Предложение
-				</a>
-			</li>
-			<li class="menu_item">
-				<a href="#reviews" class="menu_link">
-					Отзывы
-				</a>
-			</li>		
-		</ul>
-		<header class="header container">
-			<span class="header_layout">
-				Мастерская авторских сувениров
-			</span>
-			<h3 class="title title_large">
-				Сувениры от Татьяны
-			</h3>
-			<div class="contacts">
-				<div class="phone">
-					8 906-654-64-70
-				</div>
-				<a href="#" id="callback">
-					Заказать звонок
-				</a>
 			</div>
-			<div class="b-callback" style="display: none">
-                <div class="b-callback-inner">
-                    <a class="b-callback-close" aria-label="Close">×</a>
-                    <h4 class="b-callback-title">Заказать звонок</h4>
-		            <form id="callback-form">
-		              <div class="b-callback-text-wrap">
-		                <input type="text" class="application_cell" name="name" required placeholder="Ваше имя"/>
-		              </div>
-		              <div class="b-callback-text-wrap">
-		                <input id="phone" type="text" class="application_cell" name="phone" required placeholder="Ваш телефон"/>
-		              </div>
-		              <div class="b-callback-text-wrap">
-		                <input type="text" class="application_cell" name="email" required placeholder="Ваш Email"/>
-		              </div>
-		              <div class="b-callback-text-wrap">
-		                <input type="text" class="application_cell" name="time" placeholder="Удобное время для звонка"/>
-		              </div>
-		              <div class="b-callback-button-wrap">
-		                <input type="submit" class="b-callback-button" value="ПОЗВОНИТЬ МНЕ"/>
-		              </div>
-		            </form>
-                </div>
-            </div>
-		</header>
-		<main class="content">
-			<section class="home container">
-				<div class="welcome">
-					<div class="welcome_item">
-						<span class="welcome_container circle"></span>
-						<span class="welcome_container circle"></span>
-						<span class="welcome_container circle"></span>
-						<span class="welcome_container circle"></span>
+		</div>
+		<div class="container">
+			<header class="header">
+				<span class="header_layout">
+					Мастерская авторских сувениров
+				</span>
+				<h3 class="title title_large">
+					Сувениры от Татьяны
+				</h3>
+				<div class="contacts">
+					<div class="phone">
+						8 906-654-64-70
 					</div>
-					<div class="welcome_massage">
-						<h1 class="title title_big">
-							Эксклюзивные сувениры из дерева по индивидуальному проекту
-						</h1>
-						<a href="#share" id="scroll-to-contact-form" class="welcome_container arrow"></a>
-						<div class="welcome_info details">
-							Укрепите отношения с партнером с помощью элегантного знака внимания
+					<a href="#" id="callback">
+						Заказать звонок
+					</a>
+					<a href="https://vk.com/club41471980" class="button button_contact">
+						Мы в Вконтакте
+					</a>
+				</div>
+				<div class="b-callback" style="display: none">
+	                <div class="b-callback-inner">
+	                    <a class="b-callback-close" aria-label="Close">×</a>
+	                    <h4 class="b-callback-title">Заказать звонок</h4>
+			            <form id="callback-form">
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="name" required placeholder="Ваше имя"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input id="phone" type="text" class="application_cell" name="phone" required placeholder="Ваш телефон"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="email" required placeholder="Ваш Email"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="time" placeholder="Удобное время для звонка"/>
+			              </div>
+			              <div class="b-callback-button-wrap">
+			                <input type="submit" class="b-callback-button" value="ПОЗВОНИТЬ МНЕ"/>
+			              </div>
+			            </form>
+	                </div>
+	            </div>
+			</header>
+			<main class="content">
+				<section class="home wrapper">
+					<div class="welcome">
+						<div class="welcome_massage">
+							<h1 class="title title_big">
+								Эксклюзивные сувениры из дерева по индивидуальному проекту
+							</h1>
+							<div class="welcome_info details">
+								Укрепите отношения с партнером с помощью элегантного знака внимания
+							</div>
+							<a href="#share" id="scroll-to-contact-form" class="welcome_container arrow"></a>
 						</div>
 					</div>
-				</div>
-			</section>
-			<section id="share" class="share container">
-				<h3 class="title title_big">
-					Акция!
-				</h3>
-				<div class="share_info">
-					<p class="details">
-						Оставтье заявку прямо сейчас, чтобы получить пробный дизайн-проект бесплатно!
-					</p>
-					<img src="images/share_background.jpg" alt="Матрешки" />
-				</div>
-				<form action="application_form" id="sketch-form" class="order_form">
-					<h4 class="title title_large">
-						Заполните форму,
-					</h4>
-					<p class="application_form_item">
-						чтобы получить эскиз бесплатно
-					</p>
-					<input class="application_cell" type="text" name="name" required placeholder="Ваше имя*">
-					<input id="phone" class="application_cell" type="text" name="phone" required placeholder="Ваш телефон*">
-					<input class="application_cell" type="text" name="email" required placeholder="Email*">
-					<button class="button">
-						Отправить
-					</button>
-				</form>
-			</section>
-			<section id="advantages" class="advantages">
-				<div class="container">
+				</section>
+				<section id="examples" class="examples">
+					<div class="gallery_slide">
+						<ul class="slider">
+							<li>
+								<img src="images/matryoshka_owl.jpg" alt="Матрешка-Сова" />
+							</li>
+							<li>
+								<img src="images/matryoshka_elk.jpg" alt="Матрешка-ЕЛК" />
+							</li>
+							<li>
+								<img src="images/matryoshka.jpg" alt="Матрешка" />
+							</li>
+							<li>
+								<img src="images/3iQWysRoK_k.jpg" alt="Матрешка" />
+							</li>
+							<li>
+								<img src="images/3qCfQVLb7eo.jpg" alt="Матрешка" />
+							</li>
+							<li>
+								<img src="images/dDOfqAbZC8s.jpg" alt="Матрешка" />
+							</li>
+							<li>
+								<img src="images/HJPBxvogPkM.jpg" alt="Матрешка" />
+							</li>
+							<li>
+								<img src="images/y-lLuf-dB5k.jpg" alt="Матрешка" />
+							</li>
+							<li>
+								<img src="images/I4Exl2RGKjU.jpg" alt="Матрешка" />
+							</li>
+							<li>
+								<img src="images/matreshki.jpg" alt="Матрешка" />
+							</li>
+							<li>
+								<img src="images/yhEpUp80Fic.jpg" alt="Матрешка" />
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section id="share" class="share wrapper">
+					<h3 class="title title_big">
+						Акция!
+					</h3>
+					<div class="share_info">
+						<p class="details">
+							Оставтье заявку прямо сейчас, чтобы получить пробный дизайн-проект бесплатно!
+						</p>
+						<img src="images/share_background.jpg" alt="Матрешки" />
+					</div>
+					<form action="application_form" id="sketch-form" class="order_form">
+						<h4 class="title title_large">
+							Заполните форму,
+						</h4>
+						<p class="application_form_item">
+							чтобы получить эскиз бесплатно
+						</p>
+						<input class="application_cell" type="text" name="name" required placeholder="Ваше имя*">
+						<input id="phone" class="application_cell" type="text" name="phone" required placeholder="Ваш телефон*">
+						<input class="application_cell" type="text" name="email" required placeholder="Email*">
+						<button class="button">
+							Отправить
+						</button>
+					</form>
+				</section>
+				<section id="advantages" class="advantages wrapper">
 					<h3 class="title title_big">
 						Почему Вам стоит обратиться именно к нам?
 					</h3>
@@ -233,117 +229,73 @@
 							</ul>
 						</div>
 					</div>
-				</div>
-			</section>
-			<section id="how_works" class="how_works container">
-				<h3 class="title title_big">
-					Как мы работаем?
-				</h3>
-				<div class="footpace">
-					<i class="icon-mail"></i>
-					<h4 class="title title_litle">
-						Шаг 1
-					</h4>
-					<div class="details">
-						Заполните форму заявки
+				</section>
+				<section id="how_works" class="how_works wrapper">
+					<h3 class="title title_big">
+						Как мы работаем?
+					</h3>
+					<div class="footpace">
+						<i class="icon-mail"></i>
+						<h4 class="title title_litle">
+							Шаг 1
+						</h4>
+						<div class="details">
+							Заполните форму заявки
+						</div>
 					</div>
-				</div>
-				<div class="footpace">
-					<i class="icon-phone"></i>
-					<h4 class="title title_litle">
-						Шаг 2
-					</h4>
-					<div class="details">
-						Мы свяжемся с Вами в течении дня
+					<div class="footpace">
+						<i class="icon-phone"></i>
+						<h4 class="title title_litle">
+							Шаг 2
+						</h4>
+						<div class="details">
+							Мы свяжемся с Вами в течении дня
+						</div>
 					</div>
-				</div>
-				<div class="footpace">
-					<i class="icon-file-text"></i>
-					<h4 class="title title_litle">
-						Шаг 3
-					</h4>
-					<div class="details">
-						Уточняем детали заказа и делем дизайн-проект (эскиз)
+					<div class="footpace">
+						<i class="icon-file-text"></i>
+						<h4 class="title title_litle">
+							Шаг 3
+						</h4>
+						<div class="details">
+							Уточняем детали заказа и делем дизайн-проект (эскиз)
+						</div>
 					</div>
-				</div>
-				<div class="footpace">
-					<i class="icon-calendar2"></i>
-					<h4 class="title title_litle">
-						Шаг 4
-					</h4>
-					<div class="details">
-						Мы подготовим заказ в обговоренные сроки по утвержденному ранее эскизу
+					<div class="footpace">
+						<i class="icon-calendar2"></i>
+						<h4 class="title title_litle">
+							Шаг 4
+						</h4>
+						<div class="details">
+							Мы подготовим заказ в обговоренные сроки по утвержденному ранее эскизу
+						</div>
 					</div>
-				</div>
-				<div class="footpace">
-					<i class="icon-wallet"></i>
-					<h4 class="title title_litle">
-						Шаг 5
-					</h4>
-					<div class="details">
-						Оплатите заказ
+					<div class="footpace">
+						<i class="icon-wallet"></i>
+						<h4 class="title title_litle">
+							Шаг 5
+						</h4>
+						<div class="details">
+							Оплатите заказ
+						</div>
 					</div>
-				</div>
-				<div class="footpace">
-					<i class="small_item icon-delivery"></i>
-					<h4 class="title title_litle">
-						Шаг 6
-					</h4>
-					<div class="details">
-						Доставка заказа до адресата (курьерская служба доставки либо почта). Заказ можно будет отслеживать по трек-номеру.
+					<div class="footpace">
+						<i class="small_item icon-delivery"></i>
+						<h4 class="title title_litle">
+							Шаг 6
+						</h4>
+						<div class="details">
+							Доставка заказа до адресата (курьерская служба доставки либо почта). Заказ можно будет отслеживать по трек-номеру.
+						</div>
 					</div>
-				</div>
-			</section>
-			<section id="examples" class="examples container">
-				<h3 class="title title_big">
-					Примеры работ
-				</h3>
-				<a href="gallery.html" class="button">
-					Галерея
-				</a>
-				<a href="https://vk.com/club41471980" class="button">
-					Мы в Вконтакте
-				</a>
-				<div class="gallery_slide">
-					<div class="gallery_slide_layout">
-						<ul class="bxslider">
-							<li>
-								<img src="images/matryoshka_owl.jpg" alt="Матрешка-Сова" />
-							</li>
-							<li>
-								<img src="images/matryoshka_elk.jpg" alt="Матрешка-ЕЛК" />
-							</li>
-							<li>
-								<img src="images/matryoshka.jpg" alt="Матрешка" />
-							</li>
-						</ul>
-					</div>
-					<div class="gallery_slide_layout">
-						<ul class="bxslider">
-							<li>
-								<img src="images/matryoshka_owl.jpg" alt="Матрешка-Сова" />
-							</li>
-							<li>
-								<img src="images/matryoshka_elk.jpg" alt="Матрешка-ЕЛК" />
-							</li>
-							<li>
-								<img src="images/matryoshka.jpg" alt="Матрешка" />
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section id="reviews" class="reviews container">
-				<h3 class="title title_big">
-					Отзывы
-				</h3>
-				<ul class="rvslider">
-					<li>
-						<div class="slide_wrapper">
-							<div class="left_part">
-								<img src="images/Alex.png" alt="Фотография" />
-							</div>
-							<div class="right_part">
+				</section>			
+				<section id="reviews" class="reviews wrapper">
+					<h3 class="title title_big">
+						Отзывы
+					</h3>
+					<ul class="rvslider">
+						<li>
+							<div class="slide_wrapper">
 								<p class="reviews_title">
 									Алексей Новосолодский:
 								</p>
@@ -351,14 +303,9 @@
 									"Хочется выразить огромную благодарность невероятно талантливой худужнице, которая сотворила просто шедевр (без преувеличения), Татьяне! На нашей свадьбе, которая была в казачем стиле, эти матрешки были изюменкой, все гости были просто в восторге, а гость, который получил их в виде главного приза, лично передает благодарность мастеру за такую красоту!"
 								</p>
 							</div>
-						</div>
-					</li>
-					<li>
-						<div class="slide_wrapper">
-							<div class="left_part">
-								<img src="images/Larisa.jpg" alt="Фотография" />
-							</div>
-							<div class="right_part">
+						</li>
+						<li>
+							<div class="slide_wrapper">
 								<p class="reviews_title">
 									Лариса Хваль:
 								</p>
@@ -366,60 +313,58 @@
 									"В 2013-14 годах заказывали брендированные матрешки в подарок клиентам. Очень приятно было работать с Татьяной. Все было выполнено качественно и в срок. Клиенты были довольны."
 								</p>
 							</div>
+						</li>
+					</ul>
+					<form action="application_form" class="order_form" id="review-form">
+						<h4 class="title title_large">
+							Оставьте отзыв
+						</h4>
+						<input class="application_cell" type="text" name="name" placeholder="Ваше имя*">
+						<textarea class="application_cell" name="review" placeholder="Отзыв"></textarea>
+						<input type="submit" class="button" value="Отправить"/>
+					</form>
+				</section>
+				<section class="header">
+					<span class="header_layout">
+						Мастерская авторских сувениров
+					</span>
+					<h3 class="title title_large">
+						Сувениры от Татьяны
+					</h3>
+					<div class="contacts">
+						<div class="phone">
+							8 906-654-64-70
 						</div>
-					</li>
-				</ul>
-				<form action="application_form" class="order_form">
-					<h4 class="title title_large">
-						Оставьте отзыв
-					</h4>
-					<input class="application_cell" type="text" name="input_text" placeholder="Ваше имя*">
-					<textarea class="application_cell" name="review" placeholder="Отзыв"></textarea>
-					<button class="button">
-						Отправить
-					</button>
-				</form>
-			</section>
-			<section class="header container">
-				<span class="header_layout">
-					Мастерская авторских сувениров
-				</span>
-				<h3 class="title title_large">
-					Сувениры от Татьяны
-				</h3>
-				<div class="contacts">
-					<div class="phone">
-						8 906-654-64-70
+						<a href="#" id="callback">
+							Заказать звонок
+						</a>
+						<div class="b-callback footer-b-callback" style="display: none">
+			                <div class="b-callback-inner">
+			                    <a class="b-callback-close" aria-label="Close">×</a>
+			                    <h4 class="b-callback-title">Заказать звонок</h4>
+					            <form id="callback-form">
+					              <div class="b-callback-text-wrap">
+					                <input type="text" class="application_cell" name="name" required placeholder="Ваше имя"/>
+					              </div>
+					              <div class="b-callback-text-wrap">
+					                <input id="phone" type="text" class="application_cell" name="phone" required placeholder="Ваш телефон"/>
+					              </div>
+					              <div class="b-callback-text-wrap">
+					                <input type="text" class="application_cell" name="email" required placeholder="Ваш Email"/>
+					              </div>
+					              <div class="b-callback-text-wrap">
+					                <input type="text" class="application_cell" name="time" placeholder="Удобное время для звонка"/>
+					              </div>
+					              <div class="b-callback-button-wrap">
+					                <input type="submit" class="b-callback-button" value="ПОЗВОНИТЬ МНЕ"/>
+					              </div>
+					            </form>
+			                </div>
+			            </div>
 					</div>
-					<a href="#" id="callback">
-						Заказать звонок
-					</a>
-					<div class="b-callback footer-b-callback" style="display: none">
-		                <div class="b-callback-inner">
-		                    <a class="b-callback-close" aria-label="Close">×</a>
-		                    <h4 class="b-callback-title">Заказать звонок</h4>
-				            <form id="callback-form">
-				              <div class="b-callback-text-wrap">
-				                <input type="text" class="application_cell" name="name" required placeholder="Ваше имя"/>
-				              </div>
-				              <div class="b-callback-text-wrap">
-				                <input id="phone" type="text" class="application_cell" name="phone" required placeholder="Ваш телефон"/>
-				              </div>
-				              <div class="b-callback-text-wrap">
-				                <input type="text" class="application_cell" name="email" required placeholder="Ваш Email"/>
-				              </div>
-				              <div class="b-callback-text-wrap">
-				                <input type="text" class="application_cell" name="time" placeholder="Удобное время для звонка"/>
-				              </div>
-				              <div class="b-callback-button-wrap">
-				                <input type="submit" class="b-callback-button" value="ПОЗВОНИТЬ МНЕ"/>
-				              </div>
-				            </form>
-		                </div>
-		            </div>
-				</div>
-			</section>
-		</main>
+				</section>
+			</main>
+		</div>
 		<footer class="footer">
 			<div class="container">
 				<a href="http://f0002611.xsph.ru/" class="copyright">
@@ -432,25 +377,5 @@
 	<script src="js/masked_input.js"></script>
 	<script src="js/jquery.bxslider.min.js"></script>
 	<script src="js/main.js"></script>
-	<script>
-		$(document).ready(function(){
-		  $('.bxslider').bxSlider({
-				minSlides: 3,
-				maxSlides: 4,
-				slideWidth: 260,
-				moveSlides: 1,
-		  });
-		  $('.rvslider').bxSlider({
-			  	pager:false,
-				minSlides: 1,
-				maxSlides: 1,
-				slideWidth: 400,
-				moveSlides: 1,
-		  });
-		});
-		jQuery(function($){
-        	$("#phone").mask("+7 (999) 999-9999");
-        });
-	</script>
 </body>
 </html>

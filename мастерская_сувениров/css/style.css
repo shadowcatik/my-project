@@ -87,23 +87,29 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  flex-flow: row wrap;
   overflow: hidden;
   position: relative;
   min-height: 100%;
 }
 .container {
-  width: 90rem;
-  padding-top: 10rem;
+  width: 900px;
+  padding-top: 5rem;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: center;
   flex-flow: row wrap;
+}
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 100%;
+  padding: 2rem 0;
 }
 /*Заголовки*/
 .reviews_title {
@@ -142,7 +148,7 @@ a:hover {
 .title_big {
   font-size: 4.2rem;
   line-height: 4rem;
-  padding-bottom: 5rem;
+  padding: 5rem 0;
   flex: 1 1 100%;
 }
 .b-callback-title {
@@ -152,7 +158,10 @@ a:hover {
   text-align: center;
 }
 /*Menu*/
-.menu {
+.button__menu_icon {
+  display: none;
+}
+.top_menu {
   width: 100%;
   height: 2rem;
   padding: 2rem 0;
@@ -161,14 +170,26 @@ a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: center;
   position: fixed;
   left: 0;
   z-index: 2;
 }
+.top_menu .container {
+  padding: 0;
+}
+.menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
 .menu_item {
-  margin-right: 7rem;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 17rem;
   position: relative;
 }
 .menu_item:last-of-type {
@@ -177,7 +198,6 @@ a:hover {
 .menu_link {
   color: #ffffff;
   text-decoration: none;
-  font-weight: 700;
 }
 .menu_link:hover {
   text-decoration: underline;
@@ -212,7 +232,8 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
-  padding: 9rem 0 0;
+  flex: 1 1 100%;
+  padding: 3rem 0;
 }
 .header_layout {
   width: 10rem;
@@ -223,7 +244,15 @@ a:hover {
   text-align: right;
 }
 .contacts a {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+}
+.button_contact.button {
+  height: auto;
+  padding: 1.8rem 2.5rem;
+  position: relative;
+  right: 2.5rem;
+  bottom: -3rem;
+  z-index: 1;
 }
 .phone {
   font-family: 'LobsterRegular';
@@ -232,54 +261,33 @@ a:hover {
 }
 /*контент*/
 .content {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   flex: 1 1 100%;
   justify-content: center;
-  align-items: center;
   flex-flow: column wrap;
   padding-bottom: 4.7rem;
+}
+.content.g-content {
+  flex-flow: row wrap;
 }
 .home {
   background: url(../images/home_background.jpg) no-repeat center bottom;
   height: 53.6rem;
   justify-content: flex-end;
+  align-items: center;
 }
 .welcome {
-  width: 52rem;
-  height: 47rem;
-}
-.welcome_item {
-  height: 51.5rem;
-  position: absolute;
-  right: 7rem;
-  z-index: 0;
-}
-.welcome_item .welcome_container:nth-of-type(1) {
-  height: 27rem;
-  width: 27rem;
-}
-.welcome_item .welcome_container:nth-of-type(2) {
-  height: 19.2rem;
-  width: 19.2rem;
-}
-.welcome_item .welcome_container:nth-of-type(3) {
-  height: 21rem;
-  width: 22.7rem;
-}
-.welcome_item .welcome_container:nth-of-type(4) {
-  height: 25rem;
-  width: 25rem;
-}
-.welcome_massage {
-  position: relative;
-  top: 39%;
-  left: 30%;
+  width: 30rem;
+  background-color: rgba(255, 255, 255, 0.71);
+  border-radius: 4.5rem;
+  padding: 3rem;
 }
 .welcome_massage .title_big {
-  padding-bottom: 0;
+  padding: 0;
 }
 .welcome_container {
   height: 4rem;
@@ -287,40 +295,6 @@ a:hover {
   display: block;
   position: relative;
   z-index: 1;
-}
-.circle {
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  background: #ffffff;
-}
-.circle:nth-of-type(1) {
-  border-radius: 13rem;
-  -webkit-border-radius: 13rem;
-  -moz-border-radius: 13rem;
-  top: 5.5rem;
-  right: 3.7rem;
-}
-.circle:nth-of-type(2) {
-  border-radius: 10rem;
-  -webkit-border-radius: 10rem;
-  -moz-border-radius: 10rem;
-  bottom: 4.5rem;
-  right: 12.7rem;
-}
-.circle:nth-of-type(3) {
-  border-radius: 10rem;
-  -webkit-border-radius: 10rem;
-  -moz-border-radius: 10rem;
-  bottom: 20.5rem;
-  left: 2.1rem;
-}
-.circle:nth-of-type(4) {
-  border-radius: 11rem;
-  -webkit-border-radius: 11rem;
-  -moz-border-radius: 11rem;
-  bottom: 51.2rem;
-  left: 12.8rem;
 }
 .welcome_info {
   width: 32.5rem;
@@ -333,9 +307,9 @@ a:hover {
   -moz-border-radius: 5rem;
   width: 7.5rem;
   height: 7.5rem;
-  position: absolute;
-  left: -18%;
-  bottom: -2%;
+  position: relative;
+  left: 31%;
+  top: 2rem;
 }
 .arrow:before {
   content: '';
@@ -460,9 +434,6 @@ textarea:-ms-input-placeholder {
   background: url(../images/form_background.jpg) no-repeat;
   z-index: 1;
 }
-.footer-b-callback {
-  bottom: 7rem;
-}
 .b-callback-inner {
   position: relative;
   height: 250px;
@@ -508,16 +479,6 @@ textarea:-ms-input-placeholder {
   right: 153px;
 }
 /*Преимущество компании*/
-.advantages {
-  background: url(../images/advantage_background.jpg) no-repeat center;
-  background-size: cover;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-}
 .advantages .container {
   justify-content: center;
 }
@@ -543,6 +504,7 @@ textarea:-ms-input-placeholder {
 /*Как работает компания*/
 .how_works {
   color: #2c5871;
+  justify-content: space-between;
 }
 .how_works .title_big {
   font-family: 'RobotoRegular', sans-serif;
@@ -552,15 +514,9 @@ textarea:-ms-input-placeholder {
 }
 .footpace {
   width: 24.5rem;
-  flex: 0 1 20rem;
-  margin: 0 5rem 5rem 0;
+  flex: 0 1 23rem;
   font-family: 'RobotoRegular', sans-serif;
-}
-.footpace:nth-of-type(3n+3) {
-  margin: 0 0 5rem 0;
-}
-.footpace:nth-of-type(3n+2) {
-  margin: 0 10rem 5rem 0;
+  margin: 2rem 0;
 }
 .footpace .details {
   margin-top: 1.5rem;
@@ -592,39 +548,25 @@ textarea:-ms-input-placeholder {
   -moz-border-radius: 1rem;
   padding: 1.5rem;
 }
-.right_part {
-  padding-top: 1.5rem;
-}
 .reviews_details {
   font-family: Georgia, sans-serif;
   font-size: 1.4rem;
   line-height: 2rem;
 }
 /*Примеры работ*/
-.examples .button {
-  height: 2.3rem;
-  padding: 1.7rem 4rem;
-  margin: 0;
-  text-decoration: none;
-  flex: 0 1 16rem;
-  text-align: center;
-}
 .gallery_slide {
-  flex: 1 1 100%;
-}
-.gallery_slide_layout {
   margin: 5rem 0;
 }
 /*Gallery*/
 .g-slide_wrapper {
-  margin: 2rem;
+  margin: 1rem;
 }
 .g-slide_wrapper a {
   text-decoration: none;
   text-align: center;
 }
 .gallery_img {
-  width: 17vw;
+  width: 19vw;
   margin-bottom: 2rem;
 }
 .gallery {
@@ -663,11 +605,113 @@ textarea:-ms-input-placeholder {
 }
 .footer .container {
   padding: 0;
-  justify-content: flex-end;
 }
 .copyright {
   color: #ffffff;
 }
 .fancybox-custom .fancybox-skin {
   box-shadow: 0 0 50px #222;
+}
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .header .title_large {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header .title_large {
+    padding-top: 4rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contacts {
+    order: 1;
+  }
+  .header .title_large {
+    order: 2;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    min-width: 310px;
+    max-width: 900px;
+    padding: 5rem 1rem 0;
+  }
+  .wrapper {
+    justify-content: center;
+    padding: 0;
+  }
+  .top_menu .container {
+    justify-content: flex-end;
+  }
+  .button__menu_icon {
+    display: block;
+    flex: 0 1 7rem;
+  }
+  .menu {
+    display: none;
+  }
+  .show {
+    display: block;
+    background: #b78bcc;
+    position: absolute;
+    width: 100vw;
+    right: 0;
+    text-align: center;
+    margin-top: 12%;
+    padding: 15% 0;
+  }
+  .menu_item {
+    font-size: 3rem;
+    margin: 0 0 5rem;
+  }
+  .menu__link {
+    margin: 5rem auto;
+    display: block;
+  }
+  .home {
+    align-items: flex-end;
+  }
+  .title.title_small {
+    order: 2;
+  }
+  .title_big {
+    font-size: 3.9rem;
+    line-height: 6rem;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .how_works .title_big {
+    font-size: 5rem;
+  }
+  .share_info {
+    width: 100%;
+    height: auto;
+  }
+  .share_info img {
+    width: 31rem;
+  }
+  .order_form {
+    margin: 0;
+  }
+  .advantages {
+    padding-bottom: 2rem;
+  }
+  .advantages_layout {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .advantage_img {
+    margin: 0;
+  }
+  .advantage_img img {
+    width: 90%;
+  }
+  .b-callback.footer-b-callback {
+    bottom: 0;
+    right: 0;
+  }
 }

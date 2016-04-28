@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Submit contacts form
-  function submitContactsForm(name, email, phone, type, time, success_callback, error_callback){
+  function submitContactsForm(name, email, phone, type, time, review, success_callback, error_callback){
     $.ajax({
       url: 'send.php',
       method: 'post',
@@ -10,7 +10,8 @@ $(document).ready(function(){
         email: email,
         phone: phone,
         type: type,
-        time: time
+        time: time,
+        review: review
       },
       success: function(data){
         if(data.status == 'success'){
@@ -34,6 +35,33 @@ $(document).ready(function(){
       }
     });
   }
+
+//BxSlider
+  $('.slider').bxSlider({
+      minSlides: 1,
+      maxSlides: 3,
+      slideWidth: 290,
+      moveSlides: 1,
+      auto: true,
+      autoControls: true,
+    });
+    $('.rvslider').bxSlider({
+        pager:false,
+      minSlides: 1,
+      maxSlides: 1,
+      slideWidth: 320,
+      moveSlides: 1,
+    });
+
+  //Phone mask
+    jQuery(function($){
+      $("#phone").mask("+7 (999) 999-9999");
+    });
+
+  //Phone mask
+    jQuery(function($){
+      $("#phone").mask("+7 (999) 999-9999");
+    });
 
   // Scroll animation
   function scrollToAnchor(aid){
@@ -92,8 +120,24 @@ $(document).ready(function(){
     return false;
   });
 
+  // Review form
+
+   $('#review-form').submit(function(){
+    // Data validation
+    name = $('form#review-form input[name="name"]').val();
+    review = $('form#review-form textarea[name="review"]').val();
+
+    if(name == '' || review == ''){
+      alert('Все поля обязательны для заполнения');
+    }
+
+    submitContactsForm(name, review, phone, 'review', '', function(){$("#review-form")[0].reset();});
+
+    return false;
+  });
+
   // Dropdown
-    // Get the button, and when the user clicks on it, execute myFunction
+   // Get the button, and when the user clicks on it, execute myFunction
   document.getElementById("show__menu").onclick = function() {myFunction()};
 
   /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
@@ -103,9 +147,9 @@ $(document).ready(function(){
 
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(event) {
-    if (!event.target.matches('.menu_link')) {
+    if (!event.target.matches('.button__menu_icon')) {
 
-      var dropdowns = document.getElementsByClassName("menu_dropdown");
+      var dropdowns = document.getElementsByClassName("menu");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
