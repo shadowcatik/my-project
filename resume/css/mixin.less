@@ -1,0 +1,55 @@
+/* Colors */
+
+@color_theme_main: #C2A7C6;
+@color_theme: rgba(88, 12, 98, 0.36);
+@color_theme_secondary: #5997C6;
+@color_theme_other: #fff;
+
+/*Styles*/
+
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.transition(@property,@sec,@function) {
+    -webkit-transition: @property @sec @function;
+    -o-transition: @property @sec @function;
+    transition: @property @sec @function;
+}
+
+/*FlexBox*/
+
+.flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.justify-content(@justify) {
+	-webkit-justify-content: @justify;
+	-ms-flex-pack: @justify;
+	justify-content: @justify;
+}
+
+.align-items(@align-items) {
+	-webkit-box-align: @align-items;
+	-webkit-align-items: @align-items;
+	-ms-flex-align: @align-items;
+	align-items: @align-items;
+}
+
+.flex-flow(@direction,@wrap) {
+	-webkit-flex-flow: @direction @wrap;
+	-ms-flex-flow: @direction @wrap;
+	flex-flow: @direction @wrap;
+}
+
+.flex(@grow,@shrink,@basis) {
+	-webkit-box-flex: @grow;
+	-webkit-flex: @grow @shrink @basis;
+	-ms-flex: @grow @shrink @basis;
+	flex: @grow @shrink @basis;
+}

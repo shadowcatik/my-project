@@ -1,0 +1,52 @@
+/*Шапка*/
+
+.header {
+	background-color: rgba(88, 12, 98, 0.25);
+	position: fixed;
+	top: 0;
+    box-shadow: 0 0 1rem .4rem @color_theme_main;
+    z-index: 1;
+}
+
+.social_icons {
+	text-align: center;
+}
+
+/*Меню*/
+
+.fa.fa-bars.button__menu_icon {
+	display: none;
+}
+
+.fa.fa-bars {
+	font-size: 3rem;
+	color: #3AA8DB;
+    margin: 0 0 5rem;
+}
+
+.logo {
+	background: url(../images/oksana.png) no-repeat;
+	width: 13.5rem;
+	height: 16.4rem;
+	margin: 0 auto;
+	.border-radius(30%);
+}
+
+.menu {
+	font-size: 2.2rem;
+	text-align: right;
+	padding: 3rem 1.5rem 3rem;
+}
+
+.menu_link {
+	display: block;
+	color: #A563AE;
+	.transition(color,.4s,ease-in);
+	text-decoration: none;
+    margin-bottom: 1.5rem;
+    border-bottom: .1rem solid @color_theme_main;
+    
+	&:hover {
+		color: @color_theme_secondary;
+	}
+}

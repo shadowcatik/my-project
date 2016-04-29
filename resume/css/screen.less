@@ -1,0 +1,111 @@
+@media screen and (min-width: 1600px) {
+	.header {
+		width: 27rem;
+		height: auto;
+	    margin: 4rem 0 0 3rem;
+	    padding: 3rem 1.5rem 3rem;
+	}
+}
+
+@media screen and (min-width: 960px) and (max-width: 1600px) {
+	.header {
+		width: 11rem;
+		height: 100%;
+		padding: 19rem 1.5rem 3rem;
+		margin: 0;
+	}
+
+	.menu {
+		padding: 0;
+	}
+
+	.menu_link {
+		margin-bottom: 5rem;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	.logo {
+		display: none;
+	}
+
+	.header {
+		height: 100%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.container {
+		padding: 5rem 1% 0 15%;
+	}
+	.header {
+	    width: 7%;
+	    padding: 34% 0;
+	}
+
+	.menu {
+		display: none;
+	}
+	
+	.show {
+		width:100vw;
+		height: 100vh;
+		display: block;
+		background: rgba(89, 151, 198, 0.86);
+		position: absolute;
+		top: 0;
+		left: 105%;
+		text-align: center;
+		padding: 100% 0;
+	}
+
+	.menu_link {
+		color: #eee;
+		margin: 0 0 8rem 0;
+		border: 0;
+
+		&:first-of-type {
+			margin: 26% 0 8rem 0;
+		}
+	}
+
+	.fa.fa-bars.button__menu_icon {
+	    display: block;
+	}
+
+	.resume_column {
+		margin-bottom: 5rem;
+	}
+
+	.social_icons {
+		a {
+			display: block;
+			margin-bottom: 4rem;
+		}
+	}
+
+	.contact {
+		margin-bottom: 1rem;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.header {
+		padding: 73% 0;
+	}
+
+	.menu_link {
+		margin: 0 0 5rem 0;
+		
+		&:first-of-type {
+			margin: 50% 0 5rem 0;
+		}
+	}
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    div.icon .icon-music, div.icon .icon-film, div.icon .icon-steam2 {
+    	font-size: 2rem;
+    }
+}
