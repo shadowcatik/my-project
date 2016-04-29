@@ -1,0 +1,40 @@
+/*шапка*/ 
+
+.header {
+    .flexbox;
+    .justify-content(space-between);
+    .align-items(center);
+    .flex-flow(row,wrap);
+    .flex(1,1,100%);
+    padding: 3rem 0;
+}
+
+.header_layout {
+	width: 10rem;
+	line-height: 2.4rem;
+}
+
+.contacts {
+	width: 15rem;
+	position: relative;
+	text-align: right;
+
+	a {
+		font-size: 1.6rem;
+	}
+}
+
+.button_contact.button {
+	height: auto;
+	padding: 1.8rem 2.5rem;
+	position: absolute;
+	right: -3.5rem;
+	bottom: -8rem;
+	z-index: 1;
+}
+
+.phone {
+	font-family: @font;
+	font-size: 2.2rem;
+	margin-bottom: .5rem;
+}
