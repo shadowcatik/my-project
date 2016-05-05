@@ -174,66 +174,64 @@
 }
 
 @-webkit-keyframes swing {
-    15%
-    {
+    15% {
         -webkit-transform: translateX(.5rem);
         transform: translateX(.5rem);
     }
-    30%
-    {
+
+    30% {
         -webkit-transform: translateX(-0.5rem);
        transform: translateX(-0.5rem);
     }
-    50%
-    {
+
+    50% {
         -webkit-transform: translateX(.3rem);
         transform: translateX(.3rem);
     }
-    65%
-    {
+
+    65% {
         -webkit-transform: translateX(-.3rem);
         transform: translateX(-.3rem);
     }
-    80%
-    {
+
+    80% {
         -webkit-transform: translateX(.2rem);
         transform: translateX(.2rem);
     }
-    100%
-    {
+
+    100% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
 }
 
 @keyframes swing {
-    15%
-    {
+    15% {
         -webkit-transform: translateX(.5rem);
         transform: translateX(.5rem);
     }
-    30%
-    {
+
+    30% {
         -webkit-transform: translateX(-.5rem);
         transform: translateX(-.5rem);
     }
-    50%
-    {
+
+    50% {
         -webkit-transform: translateX(.3rem);
         transform: translateX(.3rem);
     }
-    65%
-    {
+
+    65% {
         -webkit-transform: translateX(-.3rem);
         transform: translateX(-.3rem);
     }
-    80%
-    {
+
+    80% {
         -webkit-transform: translateX(.2rem);
         transform: translateX(.2rem);
     }
-    100%
-    {
+
+    100% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
@@ -391,47 +389,11 @@ div.icon {
 
 /*Портфолио*/
 
-.gallery_img {
-	margin: 2rem 2rem 0 0;
-
-	&:hover {	
-		width: 100%;
-	    height: 100%;
-	    background-color: @color_theme_other;
-	    opacity: 0;
-	    box-shadow: 0 0 1rem .4rem @color_theme_main;
-    }
-    
-	.title 	{
-		margin: 9.5rem 0 0 0;
-	    color: #fff;
-	    font-weight: 700;
-	    font-size: 2.1rem;
-		background-color: @color_theme_main;
-		opacity: 0.8;
-	}
-}
-
-.santa_bremor {
-	background: url(../images/santa_bremor.jpg) no-repeat center;
-}
-
-.perm_forum {
-	background: url(../images/perm_forum.jpg) no-repeat center;
-}
-
-.club_white {
-		background: url(../images/club_white.jpg) no-repeat center;
-}
-
-.gift_shop {
-		background: url(../images/gift_shop.jpg) no-repeat center;
-}
-
-.gallery_item {
-	height: 26.6rem;
-	margin: 2rem 1rem 0 0;
+.project__layout {
+	height: 30.5rem;
 	position: relative;
+	text-align: center;
+	margin: 2rem 1rem 0 0;
 	flex: 1 1 25rem;
 
 	&:nth-of-type(4n+4) {
@@ -439,27 +401,97 @@ div.icon {
 	}
 
 	&:hover {
-		box-shadow: 0 0 1rem .4rem @color_theme_main;
-	    background: @color_theme_other;
+		cursor: pointer;
+	}
+}
 
-		.title 	{
-			letter-spacing: .1rem;
-		    color: @color_theme_other;
-		    font-weight: 700;
-		    font-size: 2.1rem;
-			background-color: @color_theme_main;
-			opacity: 0.8;
-			position: absolute;
-			top: 50%;
-			width: 100%;
-			text-align: center;
+.image__inner {
+	height: 99%;
+}
+
+.project__overlay {
+    opacity: 0;
+    width: 100%;
+    height: 99%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    .transition(opacity, .6s, ease);
+
+
+    &:hover {
+	    background-color: @color_theme_main;
+	    opacity: 1;
+
+	    .project_name__inside_bottom {
+		    top: 45%;
+		    -webkit-transform: translateY(-50%);
+		    -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		    transform: translateY(-50%);
 		}
-	}	
+
+		.project_name__inside_top {
+			top: 34%;
+			-webkit-transform: translateY(50%);
+		    -moz-transform: translateY(50%);
+		    -ms-transform: translateY(50%);
+		    transform: translateY(50%);
+		}
+
+		.project_name__inside {
+			position: relative;
+		    -webkit-transition: all .3s ease-in-out;
+		    -moz-transition: all .3s ease-in-out;
+		    -o-transition: all .3s ease-in-out;
+		    transition: all .3s ease-in-out;
+		    -webkit-transition-delay: .3s;
+		    transition-delay: .3s;
+		}
+
+		.animated.text-separator {
+			top: 30%;
+		}
+
+		.animated {
+
+			&:before {
+				border-bottom: .1rem solid @color_theme_other;
+				animation: times 2s;
+				animation-timing-function: linear;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-fill-mode: forwards; 
+				animation-fill-mode: forwards;
+			}
+		}
+    }
 }
 
-.gallery_title {
-	opacity: 0;
+@keyframes times {
+    0% {
+	    left: 50%;
+    }
+
+    100% {
+    	left: 20%;
+	    width: 65%;
+    }
 }
+
+.project_name {
+    width: 100%;
+    color: @color_theme_other;
+    position: relative;
+    color: @color_theme_other;
+	top: 10%;
+
+    &:last-of-type {
+    	top: 60%;
+    }   
+}
+
 
 /*Контакты*/
 
