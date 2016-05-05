@@ -1,0 +1,97 @@
+/*Подключаемые шрифты */
+
+ @font-face {
+	font-family:"GeosansLight-Oblique";
+	 src:url("../fonts/GeosansLight-Oblique.eot?") format("eot"),
+		 url("../fonts/GeosansLight-Oblique.woff") format("woff"),
+		 url("../fonts/GeosansLight-Oblique.ttf") format("truetype"),
+		 url("../fonts/GeosansLight-Oblique.svg#GeosansLight-Oblique") format("svg");
+	 font-weight:normal;
+	 font-style:normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+}
+
+body {
+	background-color: #000;
+	font-family: "GeosansLight-Oblique";
+}
+
+h1,h2,h3,h4 {
+	font-weight: 900;
+	color: #fff;
+}
+
+.nav.navbar-nav {
+	font-family: sans-serif;
+}
+.navbar-inverse {
+	background-color: #1b1b1b;
+}
+
+.carousel {
+	padding-top: 50px;
+}
+
+.item, .active, .item img {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+ul.social {
+	float: right;
+
+	li {
+		display: inline-block;
+		padding: 15px;
+		vertical-align: top;
+
+		a {
+			&:hover {
+				color: #fff;
+			}
+		}
+		.fa {
+			color: #777;
+			text-decoration: none;
+		}
+
+		path {
+		    fill: #777;
+
+		    &:hover {
+				fill: #fff;
+			}
+
+		}
+	}
+}
+
+.title_large {
+	font-size: 32px;
+	margin-bottom: 5rem;
+	padding-left: 3rem;
+}
+
+.releases_item {
+    width: 14vw;
+}
+
+.project_inner {
+	&:hover {
+		border: 1px solid #fff;
+
+		.title.title_small {
+			padding-bottom: 0.5rem;
+			border-bottom: 2px solid rgba(136, 255, 136, 0.71);
+		}
+	}
+}
+.wrapper {
+	padding-top: 50px;
+}
