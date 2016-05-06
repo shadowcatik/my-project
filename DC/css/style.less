@@ -20,11 +20,18 @@
 body {
 	background-color: #000;
 	font-family: "GeosansLight-Oblique";
+	font-size: 1.6rem;
+	color: #fff;
+	position: relative;
 }
 
 h1,h2,h3,h4 {
 	font-weight: 900;
 	color: #fff;
+}
+
+.row {
+	margin-bottom: 5rem;
 }
 
 .nav.navbar-nav {
@@ -35,7 +42,7 @@ h1,h2,h3,h4 {
 }
 
 .carousel {
-	padding-top: 50px;
+	padding-top: 5rem;
 }
 
 .item, .active, .item img {
@@ -48,7 +55,7 @@ ul.social {
 
 	li {
 		display: inline-block;
-		padding: 15px;
+		padding: 1.5rem;
 		vertical-align: top;
 
 		a {
@@ -72,10 +79,13 @@ ul.social {
 	}
 }
 
+.content {
+	padding-bottom: 50rem;
+}
+
 .title_large {
-	font-size: 32px;
+	font-size: 3.2rem;
 	margin-bottom: 5rem;
-	padding-left: 3rem;
 }
 
 .releases_item {
@@ -83,15 +93,67 @@ ul.social {
 }
 
 .project_inner {
+
 	&:hover {
-		border: 1px solid #fff;
+		border: .1rem solid #fff;
 
 		.title.title_small {
 			padding-bottom: 0.5rem;
-			border-bottom: 2px solid rgba(136, 255, 136, 0.71);
+			border-bottom: .2rem solid rgba(136, 255, 136, 0.71);
 		}
 	}
 }
 .wrapper {
-	padding-top: 50px;
+	padding-top: 5rem;
+}
+
+.article {
+	padding: 5rem 0;
+	border-bottom: .2rem solid green;
+}
+
+.title_article {
+	margin: 2rem 0;
+}
+.article_content {
+	margin: 3rem 0;
+}
+.article_footer {
+	width: 100%;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+.comment {
+	float: left;
+}
+
+.glyphicon-tag {
+	vertical-align: middle;
+}
+
+.article_tags {
+	float: right;
+}
+
+.article_tag {
+	display: inline-block;
+	background-color: green;
+	padding: .5rem;
+	margin: .5rem; 
+}
+
+.footer {
+	min-width: 100%;
+	height: 8rem;
+	position: absolute;
+	bottom: 0;
+	padding: 1rem 0;
+}
+
+.copyright {
+	float: left;
 }
