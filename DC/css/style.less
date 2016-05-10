@@ -30,8 +30,24 @@ h1,h2,h3,h4 {
 	color: #fff;
 }
 
+a {
+	color: @main_color_two;
+
+	&:hover {
+		color: green;
+		text-decoration:none;
+	}
+}
+
+@main_color: #fff;
+@main_color_two: rgb(18, 169, 18);
+
 .row {
 	margin-bottom: 5rem;
+}
+
+.wrapper {
+	padding-top: 5rem;
 }
 
 .nav.navbar-nav {
@@ -41,13 +57,15 @@ h1,h2,h3,h4 {
 	background-color: #1b1b1b;
 }
 
-.carousel {
-	padding-top: 5rem;
+#releaseTab,
+.tab-content {
+	.item, .active, .item img {
+	    width: auto !important;
+    }
 }
 
-.item, .active, .item img {
-    width: 80vw;
-    margin: 0 auto;
+.tab-pane.active {
+	margin-top: 2rem;
 }
 
 ul.social {
@@ -60,7 +78,7 @@ ul.social {
 
 		a {
 			&:hover {
-				color: #fff;
+				color: @main_color;
 			}
 		}
 		.fa {
@@ -72,15 +90,30 @@ ul.social {
 		    fill: #777;
 
 		    &:hover {
-				fill: #fff;
+				fill: @main_color;
 			}
 
 		}
 	}
 }
 
-.content {
-	padding-bottom: 50rem;
+.carousel {
+	padding-top: 5rem;
+}
+
+.item, .active, .item img {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/*Titles*/
+
+.title_small {
+	padding-bottom: 0.5rem;
+}
+
+.title_article {
+	margin: 2rem 0;
 }
 
 .title_large {
@@ -88,36 +121,41 @@ ul.social {
 	margin-bottom: 5rem;
 }
 
+
+/*Content*/
+
+.content {
+	padding-bottom: 50rem;
+}
+
 .releases_item {
     width: 14vw;
 }
 
 .project_inner {
+	min-height: 36rem;
+	margin-bottom: 1rem;
 
 	&:hover {
-		border: .1rem solid #fff;
+		border: .1rem solid@main_color;
 
 		.title.title_small {
-			padding-bottom: 0.5rem;
 			border-bottom: .2rem solid rgba(136, 255, 136, 0.71);
 		}
 	}
 }
-.wrapper {
-	padding-top: 5rem;
-}
+
+/*News*/
 
 .article {
 	padding: 5rem 0;
-	border-bottom: .2rem solid green;
+	border-bottom: .2rem solid @main_color_two;
 }
 
-.title_article {
-	margin: 2rem 0;
-}
 .article_content {
 	margin: 3rem 0;
 }
+
 .article_footer {
 	width: 100%;
 
@@ -127,6 +165,7 @@ ul.social {
 		display: block;
 	}
 }
+
 .comment {
 	float: left;
 }
@@ -145,6 +184,53 @@ ul.social {
 	padding: .5rem;
 	margin: .5rem; 
 }
+
+/*Project*/
+
+.project {
+	.title_large {
+		padding-bottom: 1rem;
+		border-bottom: .1rem solid @main_color_two;
+	}
+}
+
+.details_list {
+	margin: 3rem 0;
+}
+
+.details_list_item {
+	color: @main_color_two;
+}
+
+.details {
+	color: @main_color;
+	margin-left: 2rem;
+}
+
+.project_navigation {
+	width: 7rem;
+	margin-top: 2rem;
+
+	.glyphicon {
+		font-size: 3rem;
+	}
+}
+
+.project_list_item {
+	margin-bottom: 2rem;
+
+	span {
+		margin-left: 0.5rem;
+	}
+}
+
+/*Biografy*/
+
+.biography_img {
+	width: 60vw;
+}
+
+/*Footer*/
 
 .footer {
 	min-width: 100%;
