@@ -29,7 +29,7 @@
 
 .welcome_massage {
 	.title_big {
-		padding: 0;
+		padding: 0 0 2rem 0;
 	}
 }
 
@@ -144,19 +144,19 @@ input[type="text"]::-moz-placeholder {
 }
 
 textarea::-webkit-input-placeholder {
-color: @color_theme !important;
+	color: @color_theme !important;
 }
  
 textarea:-moz-placeholder { /* Firefox 18- */
-color: @color_theme !important;  
+	color: @color_theme !important;  
 }
  
 textarea::-moz-placeholder {  /* Firefox 19+ */
-color: @color_theme !important;  
+	color: @color_theme !important;  
 }
  
 textarea:-ms-input-placeholder {  
-color: @color_theme !important;  
+	color: @color_theme !important;  
 }
 
 :focus::-webkit-input-placeholder {
@@ -177,12 +177,6 @@ color: @color_theme !important;
 }
 
 /*Преимущество компании*/
-
-.advantages {
-    .container {
-    	.justify-content(center);
-    }
-}
 
 .advantage {
 	display: inline-block;
@@ -297,13 +291,7 @@ color: @color_theme !important;
 }
 
 .gallery {
-	    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     .justify-content(space-between);
-    .align-items(stretch);
-    .flex-flow(row,wrap);
 }
 
 .gallery_item {
