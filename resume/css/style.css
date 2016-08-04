@@ -115,6 +115,88 @@
   font-style: normal;
   font-weight: normal;
 }
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "VDSCompensatedLight";
+  font-weight: 100;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #333;
+}
+#page {
+  overflow-x: hidden;
+}
+.container-fluid {
+  padding: 0;
+}
+.container {
+  min-width: 320px;
+  max-width: 1170px;
+  padding: 5rem 0 0 15%;
+  margin: 0 auto;
+}
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 0 0 5rem;
+}
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/*Заголовки*/
+.title {
+  font-weight: 700;
+}
+.title_small {
+  padding: 1rem 0;
+}
+.title_middle {
+  color: #5997c6;
+  font-size: 2.6rem;
+  margin: 2rem 0 5rem 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+.title_large {
+  color: #ffffff;
+  text-align: center;
+}
 /*Шапка*/
 .header {
   background-color: rgba(88, 12, 98, 0.25);
@@ -625,88 +707,6 @@ section#contacts .row .fa {
   font-weight: 700;
   margin: 2% 0 0 34%;
   background-color: #c2a7c6;
-}
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border: none;
-}
-html {
-  font-size: 10px;
-}
-body {
-  font-family: "VDSCompensatedLight";
-  font-weight: 100;
-  font-size: 16px;
-}
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-  color: #333;
-}
-#page {
-  overflow-x: hidden;
-}
-.container-fluid {
-  padding: 0;
-}
-.container {
-  min-width: 320px;
-  max-width: 1170px;
-  padding: 5rem 0 0 15%;
-  margin: 0 auto;
-}
-.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  margin: 0 0 5rem;
-}
-.wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-/*Заголовки*/
-.title {
-  font-weight: 700;
-}
-.title_small {
-  padding: 1rem 0;
-}
-.title_middle {
-  color: #5997c6;
-  font-size: 2.6rem;
-  margin: 2rem 0 5rem 0;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-}
-.title_large {
-  color: #ffffff;
-  text-align: center;
 }
 @media screen and (min-width: 1600px) {
   .header {
