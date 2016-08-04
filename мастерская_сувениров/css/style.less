@@ -17,6 +17,10 @@ html {
 	font-size: 10px;
 }
 
+html, body {
+	height: 100%;
+}
+
 body {
 	font-size: 16px;
 	font-family: open sans,sans-serif;
@@ -34,19 +38,19 @@ a {
 
 #page {
 	.flexbox;
-    .justify-content(center);
+    .align-items(center);
     overflow: hidden;
-    position: relative;
+    .flex-flow(column, wrap);
     min-height: 100%;
 }
 
 .container {
-	width: 900px;
-	padding-top: 5rem;
+	padding: 5rem 0 2rem;
 	position: relative;
 	.flexbox;
     .justify-content(center);
     .flex-flow(row,wrap);
+    .flex(1,1,0%);
 }
 
 .container_fluid {

@@ -2,11 +2,132 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Галерея авторских сувениров на любой вкус!">
+    <meta name="description" content="Футляры авторской работы">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" href="css/jquery.bxslider.css" />
-	<title>Галерея авторских сувениров</title>
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {		
+			$('.fancybox').fancybox();
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+			/* Open manually */
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+		});
+	</script>
+	<title>Роспись футляров</title>
 </head>
 <body>
 <!-- Yandex.Metrika counter -->
@@ -117,90 +238,46 @@
 				</a>
 			</header>
 			<main class="content g-content">
+				<div class="container">
 					<h3 class="title title_big">
-						Галерея
+						Футляры
 					</h3>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="matryoshka.html">
-							<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
-							<h4 class="title title_middle">
-								Матрешки
-							</h4>
+					<div class="gallery wrapper">
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/vK-FLhDM73I.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/vK-FLhDM73I.jpg" alt="Футляры" />
 						</a>
-					</section>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="cask.html">
-							<img src="images/cask/1OTUJLWTd4A.jpg" alt="Бочонок" class="gallery_img" />
-							<h4 class="title title_middle">
-								Бочонки
-							</h4>
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/OPypWa00D9k.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/OPypWa00D9k.jpg" alt="Футляры" />
 						</a>
-					</section>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="dolls.html">
-							<img src="images/dolls/mGHjZYcv628.jpg" alt="Куклы" class="gallery_img" />
-							<h4 class="title title_middle">
-								Куклы
-							</h4>
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/3dPMOTKvLck.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/3dPMOTKvLck.jpg" alt="Футляры" />
 						</a>
-					</section>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="cases.html">
-							<img src="images/cases/K6fzP9c-LA0.jpg" alt="Футляры" class="gallery_img" />
-							<h4 class="title title_middle">
-								Футляры
-							</h4>
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/K6fzP9c-LA0.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/K6fzP9c-LA0.jpg" alt="Футляры" />
 						</a>
-					</section>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="cassette.html">
-							<img src="images/cassete/jowf6Hpjy9U.jpg" alt="Шкатулки и копилки" class="gallery_img" />
-							<h4 class="title title_middle">
-								Шкатулки и копилки
-							</h4>
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/5-LfyRpwB5k.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/5-LfyRpwB5k.jpg" alt="Футляры" />
 						</a>
-					</section>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="">
-							<img src="images/bred/De2yO6vucIg.jpg" alt="Доски" class="gallery_img" />
-							<h4 class="title title_middle">
-								Доски
-							</h4>
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/bHUanDnjgAM.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/bHUanDnjgAM.jpg" alt="Футляры" />
 						</a>
-					</section>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="">
-							<img src="images/eggs&bracelets/PHNjUFjOMhA.jpg" alt="Браслеты и яйца" class="gallery_img" />
-							<h4 class="title title_middle">
-								Браслеты и яйца
-							</h4>
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/uTleBsEA4M0.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/uTleBsEA4M0.jpg" alt="Футляры" />
 						</a>
-					</section>
-					<!--<section class="slide_wrapper g-slide_wrapper">
-						<a href="">
-							<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
-							<h4 class="title title_middle">
-								Сувениры с логотипами
-							</h4>
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/5sRKArwhaP8.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/5sRKArwhaP8.jpg" alt="Футляры" />
+						</a>		
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/z_XckCIZu6I.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/z_XckCIZu6I.jpg" alt="Футляры" />
+						</a>			
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/4d7kov4ZJh0.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/4d7kov4ZJh0.jpg" alt="Футляры" />
 						</a>
-					</section>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="">
-							<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
-							<h4 class="title title_middle">
-								Сувениры к праздникам
-							</h4>
-						</a>
-					</section>
-					<section class="slide_wrapper g-slide_wrapper">
-						<a href="">
-							<img src="images/matryoshka.jpg" alt="Матрешка" class="gallery_img" />
-							<h4 class="title title_middle">
-								Прочая сувенирная продукция
-							</h4>
-						</a>
-					</section>-->
-
+						<a class="dolls gallery_item fancybox-effects-c" href="images/cases/Z5t8WgGASF0.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/cases/Z5t8WgGASF0.jpg" alt="Футляры" />
+						</a>	
+					</div>
+				</div>
 			</main>
 		</div>
 		<footer class="footer">
@@ -211,9 +288,6 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/jquery-1.12.1.min.js"></script>
-	<script src="js/masked_input.js"></script>
-	<script src="js/jquery.bxslider.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/main.js"></script>	
 </body>
 </html>

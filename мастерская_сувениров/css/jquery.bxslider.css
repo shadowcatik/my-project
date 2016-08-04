@@ -113,7 +113,13 @@
 	background: url(../images/controls.png) no-repeat -43px -32px;
 }
 
-.bx-wrapper .bx-prev:hover {
+@media screen and (min-width: 310px) and (max-width: 600px) {
+	.bx-wrapper .bx-next,
+	.bx-wrapper .bx-prev {
+		display: none;
+	}
+}
+ .bx-wrapper .bx-prev:hover {
 	background-position: 0 0;
 }
 

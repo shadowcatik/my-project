@@ -36,31 +36,9 @@ $(document).ready(function(){
     });
   }
 
-//BxSlider
-  $('.slider').bxSlider({
-      minSlides: 1,
-      maxSlides: 3,
-      slideWidth: 290,
-      moveSlides: 1,
-      auto: true,
-      autoControls: true,
-    });
-    $('.rvslider').bxSlider({
-        pager:false,
-      minSlides: 1,
-      maxSlides: 1,
-      slideWidth: 320,
-      moveSlides: 1,
-    });
-
   //Phone mask
     jQuery(function($){
-      $("#phone").mask("+7 (999) 999-9999");
-    });
-
-  //Phone mask
-    jQuery(function($){
-      $("#phone").mask("+7 (999) 999-9999");
+      $(".phone_mask").mask("+7 (999) 999-9999");
     });
 
   // Scroll animation
@@ -159,4 +137,24 @@ $(document).ready(function(){
       }
     }
   }
+
+  //BxSlider
+  $('.slider').bxSlider({
+      minSlides: 1,
+      maxSlides: 3,
+      slideWidth: 290,
+      slideMargin: 10,
+      moveSlides: 1,
+      auto: true,
+      autoControls: true,
+    });
+  $('.rvslider').bxSlider({
+      minSlides: 1,
+      maxSlides: 3,
+      slideWidth: 290,
+      slideMargin: 10,
+      moveSlides: 1,
+      auto: true,
+      autoControls: true,
+    });
 });
