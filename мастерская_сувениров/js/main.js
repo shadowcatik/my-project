@@ -150,7 +150,7 @@ $(document).ready(function(){
     });
   $('.rvslider').bxSlider({
       minSlides: 1,
-      maxSlides: 3,
+      maxSlides: 2,
       slideWidth: 290,
       slideMargin: 10,
       moveSlides: 1,

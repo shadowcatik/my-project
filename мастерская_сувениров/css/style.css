@@ -487,6 +487,7 @@ textarea:-ms-input-placeholder {
 .b-callback {
   position: absolute;
   right: 0;
+  bottom: -21rem;
   width: 340px;
   height: 345px;
   background: url(../images/form_background.jpg) no-repeat;
