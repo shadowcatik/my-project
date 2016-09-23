@@ -1,0 +1,46 @@
+/*Шапка*/
+
+.header {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: .5rem solid #fad027;
+}
+
+.container.header {
+	.align-items(stretch);
+}
+
+.logo {
+	width: 16.5rem;
+	font-size: 2.4rem;	
+	line-height: 2.4rem;
+	.flex(0,1,18rem);
+}
+
+.logo__item {
+	font-size: 1.6rem;
+	color: @color_theme_main;
+}
+
+/*Навигация*/
+
+.button__menu_icon {
+	display: none;
+}
+
+.menu {
+	font-size: 1.8rem;
+	padding-top: 1.5rem;
+}
+
+.menu__link {
+	margin-right: 3.5rem;
+
+	&:hover {
+		color: #0091be;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
