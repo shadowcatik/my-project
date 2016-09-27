@@ -2,8 +2,8 @@ jQuery(document).ready(function ($) {
 
    
   var slideCount = $('#slider ul li').length;
-  var slideWidth = $('#slider ul li').outerWidth();
-  var slideHeight = $('#slider ul li').outerHeight();
+  var slideWidth = $('#slider ul li').width();
+  var slideHeight = $('#slider ul li').height();
   var sliderUlWidth = slideCount * slideWidth;
   
   $('#slider').css({ width: slideWidth });

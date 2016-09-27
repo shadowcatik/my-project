@@ -8,21 +8,21 @@
 	<title>Demo - Night club</title>
 </head>
 <body>
-	<div class="panel_menu">
+	<div class="menu_layout">
 		<nav class="menu container">
-			<a href="#about_us" class="menu_link">ABOUT US</a>
-			<a href="#news" class="menu_link">NEWS</a>
-			<a href="#photos" class="menu_link">GALLERY</a>
-			<a href="#events" class="menu_link">EVENTS</a>	
-			<a href="#review" class="menu_link">REVIEWS</a>
-			<a href="#contacts" class="menu_link">CONTACTS</a>		
+			<a href="#about-us" class="menu__link">ABOUT US</a>
+			<a href="#news" class="menu__link">NEWS</a>
+			<a href="#gallery" class="menu__link">GALLERY</a>
+			<a href="#events" class="menu__link">EVENTS</a>	
+			<a href="#review" class="menu__link">REVIEWS</a>
+			<a href="#contacts" class="menu__link">CONTACTS</a>		
 		</nav>
 	</div>
 	<header class="header">
-		<div class="logo"></div>
+		<div class="header__logo"></div>
 	</header>
-	<section id="about_us" class="about_club">
-		<div class="container">
+	<section id="about-us" class="about-club">
+		<div class="container about-club__container">
 			<h3 class="title">
 				ABOUT US
 			</h3>
@@ -34,10 +34,10 @@
 		</div>
 	</section>
 	<section class="slider">
-		<section class="slider__list--wrap">
-			<div id="slider">
-				<ul class="slider__list">
-					<li class="slider__item active">
+		<div id="slider">
+			<ul class="slider__list">
+				<li class="slider__item active">
+					<div class="slider__item--inner">
 						<h3 class="title">
 							Bar
 						</h3>
@@ -46,8 +46,10 @@
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eligendi.
 							</p>
 						</div>
-					</li>
-					<li class="slider__item">
+					</div>
+				</li>
+				<li class="slider__item">
+					<div class="slider__item--inner">
 						<h3 class="title">
 							Barmen
 						</h3>
@@ -56,8 +58,10 @@
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, obcaecati!
 							</p>
 						</div>
-					</li>
-					<li class="slider__item">
+					</div>
+				</li>
+				<li class="slider__item">
+					<div class="slider__item--inner">
 						<h3 class="title">
 							Lorem
 						</h3>
@@ -66,8 +70,10 @@
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iusto laborum ratione alias dolor cumque nemo, laudantium itaque minus possimus.
 							</p>
 						</div>
-					</li>
-					<li class="slider__item">
+					</div>
+				</li>
+				<li class="slider__item">
+					<div class="slider__item--inner">
 						<h3 class="title">
 							Lorem ipsum dolor.
 						</h3>
@@ -76,22 +82,22 @@
 								Lorem ipsum dolor sit amet.
 							</p>
 						</div>
-					</li>
-				</ul>
-			</div>		
-		</section>
+					</div>
+				</li>	
+			</ul>		
+		</div>
 		<div class="slider__controls">
 			<div class="slider__controls-button slider__controls-button--prev"></div>
-			<div class="slide_arrow slider__controls-button slider__controls-button--next"></div>
+			<div class="slider__controls-button slider__controls-button--next"></div>
 		</div>
 	</section>
 	<section id="news" class="news content">
 		<h3 class="title">
 			NEWS
 		</h3>
-		<div class="news_content">
-			<article class="news_line">
-				<div class="news_left_column">
+		<div class="news__content">
+			<article class="news__line">
+				<div class="news__left-column">
 					<div class="date">
 						21 January
 					</div>
@@ -99,14 +105,14 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing.
 					</h3>
 				</div>
-				<div class="news_right_column">
+				<div class="news__right-column">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, accusantium. Eos, quibusdam laborum? Est animi, consectetur quae, alias veritatis voluptate amet nesciunt quasi tempora saepe aut. Tempore asperiores, reiciendis nemo.
 					</p>
 				</div>
 			</article>
-			<article class="news_line">
-				<div class="news_left_column">
+			<article class="news__line">
+				<div class="news__left-column">
 					<div class="date">
 						17 January
 					</div>
@@ -114,14 +120,14 @@
 						Lorem ipsum dolor sit.
 					</h3>
 				</div>
-				<div class="news_right_column">
+				<div class="news__right-column">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque quos ipsa eveniet maxime similique!
 					</p>
 				</div>
 			</article>
-			<article class="news_line">
-				<div class="news_left_column">
+			<article class="news__line">
+				<div class="news__left-column">
 					<div class="date">
 						9 January
 					</div>
@@ -129,7 +135,7 @@
 						DJ Alex Cosmo
 					</h3>
 				</div>
-				<div class="news_right_column">
+				<div class="news__right-column">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos atque quod facere, pariatur mollitia aliquid ullam, ex amet nihil aperiam praesentium quaerat quibusdam quisquam animi.
 					<p>
@@ -137,57 +143,57 @@
 			</article>
 		</div>
 	</section>
-	<section id="photos" class="photos">
+	<section id="gallery" class="gallery_wrap">
 		<h3 class="title">
 			GALLERY
 		</h3>
 		<div class="gallery">
-			<div class="photo"><img src="images/girl.jpg" alt="Girl" class="photo_img" /></div>
-			<div class="photo"><img src="images/room.jpg" alt="Room" class="photo_img" /></div>
-			<div class="photo"><img src="images/banquet_room.jpg" alt="Room" class="photo_img" /></div>
-			<div class="photo"><img src="images/banquet_hall.jpg" alt="Room" class="photo_img" /></div>
-			<div class="photo"><img src="images/girl.jpg" alt="Girl" class="photo_img" /></div>
-			<div class="photo"><img src="images/room.jpg" alt="Room" class="photo_img" /></div>
-			<div class="photo"><img src="images/banquet_room.jpg" alt="Room" class="photo_img" /></div>
-			<div class="photo"><img src="images/banquet_hall.jpg" alt="Room" class="photo_img" /></div>
+			<div class="gallery__item"><img src="images/girl.jpg" alt="Girl" /></div>
+			<div class="gallery__item"><img src="images/room.jpg" alt="Room" /></div>
+			<div class="gallery__item"><img src="images/banquet_room.jpg" alt="Room" /></div>
+			<div class="gallery__item"><img src="images/banquet_hall.jpg" alt="Room" /></div>
+			<div class="gallery__item"><img src="images/girl.jpg" alt="Girl" /></div>
+			<div class="gallery__item"><img src="images/room.jpg" alt="Room" /></div>
+			<div class="gallery__item"><img src="images/banquet_room.jpg" alt="Room" /></div>
+			<div class="gallery__item"><img src="images/banquet_hall.jpg" alt="Room" /></div>
 		</div>
 	</section>
 	<section id="events" class="events container">
 		<h3 class="title">
 			EVENTS
 		</h3>
-		<div class="event_line">
-			<div class="event_left_column">
+		<div class="event__line">
+			<div class="event__left-column">
 				<div class="date">
 					21 January
 				</div>
 			</div>
-			<div class="event_right_column">
+			<div class="event__right-column">
 				<h3 class="title title_small">
 					Lorem ipsum dolor sit amet.DJ Romeo
 				</h3>
 				<img src="images/romeo.jpg" alt="DJ Romeo" class="event_poster" />
 			</div>
 		</div>
-		<div class="event_line">
-			<div class="event_left_column">
+		<div class="event__line">
+			<div class="event__left-column">
 				<h3 class="title title_small">
 					Lorem ipsum dolor.
 				</h3>
 			</div>
-			<div class="event_right_column">
+			<div class="event__right-column">
 				<div class="date">
 					17 January
 				</div>
 			</div>
 		</div>
-		<div class="event_line">
-			<div class="event_left_column">
+		<div class="event__line">
+			<div class="event__left-column">
 				<div class="date">
 					5 January
 				</div>
 			</div>
-			<div class="event_right_column event_right_last_column">
+			<div class="event__right-column event__right-column_last">
 				<h3 class="title title_small">
 					Lorem ipsum dolor sit.
 				</h3>
@@ -199,9 +205,9 @@
 			<h3 class="title">
 				REVIEWS
 			</h3>
-			<div class="review_item">
-				<div class="review_line">
-					<div class="review_left_column">
+			<div class="review__item">
+				<div class="review__line">
+					<div class="review__left-column">
 						<p>
 							Alex
 						</p>
@@ -209,10 +215,9 @@
 							18 December 2014
 						</p>
 					</div>
-					<div class="review_right_column">
+					<div class="review__right-column">
 						<div class="post">
-							<span class="line top_line"></span>
-							<div class="post_item">
+							<div class="post__item draw meet">
 								<p>
 									Good club! 
 								</p>
@@ -220,12 +225,11 @@
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quibusdam optio, sit omnis. Eligendi, asperiores.
 								</p>
 							</div>
-							<span class="line bottom_line"></span>
 						</div>
 					</div>
 				</div>
-				<div class="review_line">
-					<div class="review_left_column">
+				<div class="review__line">
+					<div class="review__left-column">
 						<p>
 							Irina
 						</p>
@@ -233,10 +237,9 @@
 							2 December 2014
 						</p>	
 					</div>
-					<div class="review_right_column">
+					<div class="review__right-column">
 						<div class="post">
-							<span class="line top_line"></span>
-							<div class="post_item">
+							<div class="post__item draw meet">
 								<p>
 									Cool!  
 								</p>
@@ -244,12 +247,11 @@
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, hic.
 								</p>
 							</div>
-							<span class="line bottom_line"></span>
 						</div>
 					</div>
 				</div>
-				<div class="review_line">
-					<div class="review_left_column">
+				<div class="review__line">
+					<div class="review__left-column">
 						<p>
 							Lina
 						</p>
@@ -257,10 +259,9 @@
 							18 December 2014
 						</p>	
 					</div>
-					<div class="review_right_column">
+					<div class="review__right-column">
 						<div class="post">
-							<span class="line top_line"></span>
-							<div class="post_item">
+							<div class="post__item draw meet">
 								<p>
 									Good club!
 								</p>
@@ -268,7 +269,6 @@
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores blanditiis autem, eveniet illo, dolor voluptatibus eius nulla provident ipsa ab labore corporis officia esse exercitationem magnam, veniam earum recusandae dolore!
 								</p>
 							</div>
-							<span class="line bottom_line"></span>
 						</div>
 					</div>
 				</div>
@@ -279,7 +279,7 @@
 		<h3 class="title">
 			APPLICATION
 		</h3>
-		<div class="application_massage">
+		<div class="application__massage">
 			<p>
 				Send application
 			</p>
@@ -287,15 +287,15 @@
 				and we called you!
 			</p>
 		</div>
-		<form action="application_form">
-			<div class="application_column">
-				<input class="application_cell" type="text" name="input_text" placeholder="Name">
-				<input class="application_cell" type="text" name="input_text" placeholder="Phone">
-				<input class="application_cell" type="text" name="input_text" placeholder="Day:Month:Year">
+		<form class="application__form">
+			<div class="application__column">
+				<input class="application__cell" type="text" name="name" placeholder="Name">
+				<input class="application__cell" type="text" name="phone" placeholder="Phone">
+				<input class="application__cell" type="text" name="date" placeholder="Day:Month:Year">
 			</div>
-			<div class="application_column">
-				<input class="application_cell" type="text" name="input_text" placeholder="Numbers of person">
-				<textarea class="application_cell comment" type="text" name="comment" placeholder="Your comment"></textarea>
+			<div class="application__column">
+				<input class="application__cell" type="text" name="person" placeholder="Numbers of person">
+				<textarea class="application__cell comment" type="text" name="comment" placeholder="Your comment"></textarea>
 			</div>
 			<button class="button">
 				SEND
@@ -307,7 +307,7 @@
 			CONTACTS
 		</h3>
 		<div class="map">
-			<div class="contacts_info">
+			<div class="contacts__info">
 				<div class="info">
 					Address:
 					<p>
@@ -326,10 +326,8 @@
 	</section>
 	<footer class="footer">
 		<div class="copyright">
-			<p>
-				2014 &copy;White
-			</p>
-			<img src="images/copyright_logo.png" alt="DevLabPro" class="logo_copyright" />
+			2014 &copy;
+			<a href="http://f0002611.xsph.ru/" class="copyright"> Melnik O.A. </a>
 		</div>
 	</footer>
 	<script src="js/jquery-1.12.1.min.js"></script>

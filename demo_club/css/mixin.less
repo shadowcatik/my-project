@@ -2,10 +2,25 @@
 
 .transformation (@deg) {
 
-	-moz-transform:rotate(@deg);
-	-o-transform:rotate(@deg);
-	-ms-transform:rotate(@deg);
-	transform:rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+
+/*Flexbox*/
+
+.flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.flex-flow (@row, @wrap) {
+	-webkit-flex-flow: @row @wrap;
+	-ms-flex-flow: @row @wrap;
+	flex-flow: @row @wrap;
 }
 
 /*Colors*/

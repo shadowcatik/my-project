@@ -11,58 +11,56 @@
 	border: none;
 }
 
+html {
+	font-size: 10px;
+}
+
 body {
 	font-family: PT Sans;
-	font-size: 18px;
+	font-size: 1.8rem;
 	background-color: #000;
 }
 
 .container {
-	width: 900px;
-	margin: 0 auto;
-}
-
-.content {
-	min-width: 800px;
-	max-width: 1020px;
+	width: 90rem;
 	margin: 0 auto;
 }
 
 /*Titles*/
 
 .title {
-	font-size: 48px;
-	margin-bottom: 30px;
+	font-size: 4.8rem;
+	margin-bottom: 3rem;
 	color: @color_theme;
 	text-align: center;
 }
 
 .title_small {
-	font-size: 28px;
+	font-size: 2.8rem;
 	text-align: left;
-	line-height: 32px;
+	line-height: 3.2rem;
 }
 
 /*Date*/
 
 .date {
 	background-color: @color_theme;
-	padding: 10px 0 5px 0;
-	font-size: 14px;
+	padding: 1rem 0 .5rem 0;
+	font-size: 1.4rem;
 	float: left;
-	line-height: 24px;
-	width: 60px;
+	line-height: 2.4rem;
+	width: 6rem;
 	text-align: center;
     font-weight: 700;
 
 	&:first-line {
-		font-size: 36px;
+		font-size: 3.6rem;
 	}
 }
 
 /*Menu*/
 
-.panel_menu {
+.menu_layout {
 	width: 100%;
 	background-color: #000;
 	text-align: center;
@@ -72,14 +70,14 @@ body {
 }
 
 .menu  {
-	border-bottom: 5px solid #fad027;
-	font-size: 22px;
-	padding-top: 45px;
+	border-bottom: .5rem solid @color_theme;
+	font-size: 2.2rem;
+	padding-top: 4.5rem;
 }
 
-.menu_link {
+.menu__link {
 	color: @color_theme_two;
-	margin: 0 29px 10px 0;
+	margin: 0 2.9rem 1rem 0;
 	display: inline-block;
 	transition: color .4s ease-in;
 	text-decoration: none;
@@ -90,37 +88,38 @@ body {
 	}
 
 	&:last-of-type {
-		margin: 0 0 10px 0;
+		margin: 0 0 1rem 0;
 	}
 }
 
 /*Header*/
 
 .header {
-	margin-top: 80px;
+	margin-top: 8rem;
 }
 
-.logo {
-	background: url(../images/logo.png) no-repeat 0 110px;
-	width: 623px;
-	height: 202px;
+.header__logo {
+	background: url(../images/logo.png) no-repeat 0 11rem;
+	width: 62.3rem;
+	height: 20.2rem;
+	background-size: 100%;
 	margin: 0 auto;
-	padding: 110px 0;
+	padding: 11rem 0;
 }
 
 /*About club*/
 
-.about_club {
+.about-club {
 	background-color: @color_theme;
-	padding: 85px 0 90px 0;
+	padding: 8.5rem 0 9rem 0;
 	text-align: center;
+}
 
-	.container {
-		width: 555px;
+.about-club__container {
+	width: 55.5rem;
 
-		.title {
-			color: #000;
-		}
+	.title {
+		color: #000;
 	}
 }
 
@@ -131,17 +130,17 @@ body {
 /*News*/ 
 
 .news {
-	padding: 90px 130px 0 125px;
+	padding: 9rem 0 0;
 }
 
-.news_left_column {
-	width: 230px;
+.news__left-column {
+	width: 23%;
 	float: left;
 	font-weight: 700;
 
 	.title_small {
 		float: right;
-		width: 145px;
+		width: 14.5rem;
 	}
 
 	&:after {
@@ -151,8 +150,8 @@ body {
 	}
 }
 
-.news_line {
-	margin-bottom: 50px;
+.news__line {
+	margin-bottom: 5rem;
 
 	&:after {
 		content: "";
@@ -161,48 +160,47 @@ body {
 	}
 }
 
-.news_right_column {
-	width: 450px;
+.news__right-column {
+	width: 45%;
 	float: right;
 	color: @color_theme_two;
-	padding: 35px 25px 40px 25px; 
+	padding: 3.5rem 2.5rem 4rem 2.5rem; 
 	text-align: left;
-	border: 5px solid #292929;
+	border: .5rem solid #292929;
 
 	&:hover {
-		border: 5px solid #fff;
+		border: .5rem solid @color_theme_two;
 	}
 }
 
 /*Gallery*/
 
-.photos {
-	padding: 50px 0 0 0;
+.gallery_wrap {
+	padding: 5rem 0 0 0;
 }
 
 .gallery {
-	width: 1020px;
-	margin: 0 auto;
+	width: 102rem;
+	.flexbox;
+	.flex-flow(row, wrap);
 	font-size: 0;
-	display: flex;
-	flex-flow: row wrap;
-
+	margin: 0 auto;
 }
 
-.photo {
+.gallery__item {
 	&:hover {
 		position: relative;
-		box-shadow: 0 0 0 4px @color_theme;
+		box-shadow: 0 0 0 .4rem @color_theme;
 	}
 }
 
 /*Events*/
 
 .events {
-	padding: 95px 0;
+	padding: 9.5rem 0;
 }
 
-.event_line {
+.event__line {
 	&:after {
 		content: "";
 		clear: both;
@@ -210,12 +208,12 @@ body {
 	}
 
 	.title_small {
-		margin-bottom: 30px;
+		margin-bottom: 3rem;
 	}
 }
 
-.event_left_column {
-	width: 345px;
+.event__left-column {
+	width: 34.5rem;
 	float: left;
 
 	.date {
@@ -227,11 +225,11 @@ body {
 	}
 }
 
-.event_right_column {
+.event__right-column {
 	float: right;
-	border-left: 5px solid #292929;
-	width: 375px;
-	padding: 0 0 65px 40px;
+	width: 37.5rem;
+	padding: 0 0 6.5rem 4rem;
+	border-left: .5rem solid #292929;
 
 	&:after {
 		content: "";
@@ -240,7 +238,7 @@ body {
 	}
 }
 
-.event_right_last_column {
+.event__right-column_last {
 	padding-bottom: 0;
 }
 
@@ -252,29 +250,29 @@ body {
 
 .review {
 	background-color: @color_theme;
-	padding: 80px 0 85px 0;
+	padding: 8rem 0 8.5rem 0;
 
 	.title {
 		color: #000;
 	}
 
 	.top_line {
-		width:10%;
+		width: 10%;
 	}
 
-	.post_item {
+	.post__item {
 		&:after {
 			height: 35%;
 			bottom: 0;
 		}
 	}
-	.post_item {
+	.post__item {
 		&:before {
 			top: 0;
 		}
 	}
 
-	.post_item {
+	.post__item {
 		&:before {
 			height: 35%;
 		}
@@ -286,8 +284,8 @@ body {
 	}
 }
 
-.review_line {
-	padding: 25px 0;
+.review__line {
+	padding: 2.5rem 0;
 
 		&:after {
 			content: "";
@@ -296,116 +294,157 @@ body {
 		}
 }
 
-.review_left_column {
+.review__left-column {
 	float: left;
-	width: 180px;
+	width: 18rem;
 	text-align: left;
-	font-size: 16px;
-	padding-right: 45px;
+	font-size: 1.6rem;
+	padding-right: 4.5rem;
 
 	&:first-line {
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 2rem;
 	}
 }
 
-.review_right_column {
+.review__right-column {
 	float: left;
-	max-width: 470px;
+	max-width: 47rem;
 }
 
 .post {
 	position: relative;
 }
 
-.post_item {
-	padding: 30px 25px 20px;
+.post__item {
+	padding: 3rem 2.5rem 2rem;
 	
-	&:before {
-		left: 0;
-	}
-
-	&:after, &:before {
-		content: "";
-		display: block;
-		background-color: #fff;
-		width: 5px;
-		height: 20px;
-		opacity: 0.5;
-		position: absolute;
-	}
-
-	&:after {
-		right: 0;
-	}
+  &::before,
+  &::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.bottom_line {
-	bottom: 0;
+.draw {
+
+  &::before,
+  &::after {
+    border: 2px solid transparent; // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    transition:
+      width 0.5s ease-out, 
+      height 0.5s ease-out 0.5s; 
+  }
+
+  &:hover::after {
+    transition:
+      border-color 0s ease-out 0.8s,
+      width 0.5s ease-out 0.8s, 
+      height 0.5s ease-out 1s; 
+  }
 }
 
-.top_line {
-	top:0;
-}
+// Inherits from .draw
+.meet {
+  
+  // Start ::after in same position as ::before
+  &::after {
+    top: 0;
+    left: 0;
+  }
 
-.line {
-	height: 5px;
-	background-color: #fff;
-	position: absolute;
-	opacity: 0.5;
+  // Change colors
+  &:hover::before {
+    border-top-color: @color_theme_two;
+    border-right-color: @color_theme_two;
+  }
+
+  &:hover::after {
+    border-bottom-color: @color_theme_two;
+    border-left-color: @color_theme_two;
+    transition: // Animate height first, then width
+      height 0.5s ease-out,
+      width 0.5s ease-out 0.5s;
+  }
 }
 
 /*Application*/
 
 .application {
-	padding: 90px 0 95px 0;
+	padding: 9rem 0 9.5rem 0;
 }
 
-.application_massage {
-	padding: 15px 0 30px 0;
+.application__massage {
 	color: @color_theme_two;
+	padding: 1.5rem 0 3rem 0;
 	text-align: center;
 }
 
-form {
+.application__form {
+	width: 67rem;
 	text-align: center;
 	margin: 0 auto;
-	width: 670px;
 }
 
-.application_column {
-	width: 320px;
+.application__column {
+	width: 32rem;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 1rem;
 	vertical-align: top;
 }
 
-.application_cell {
-	width: 320px;
-	padding: 10px 0 10px 10px;
-	margin-bottom: 10px;
+.application__cell {
+	width: 32rem;
+	padding: 1rem 0 1rem 1rem;
+	margin-bottom: 1rem;
 }
 
 .comment {
-	max-width: 320px;
-	padding: 10px 0 40px 10px;
+	padding: 1rem 0 4rem 1rem;
 }
 
 .button {
-    height: 35px;
-    padding: 0 40px;
-    font-size: 20px;
-    cursor: pointer;
+    height: 3.5rem;
+    font-size: 2rem;
     color: @color_theme_two;
     background-color: @color_theme;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 2rem;
+    padding: 0 4rem;
+    cursor: pointer;
 }
 
 /*Contacts*/
 
 .contacts {
-	padding-bottom: 60px;
+	padding-bottom: 6rem;
 }
 
 .map {
@@ -421,35 +460,37 @@ ymaps, ymaps canvas, ymaps i, ymaps input {
     filter: gray;
 }
 
-.contacts_info {
-	width: 215px;
-	padding: 40px 55px 35px 50px;
+.contacts__info {
 	background-color: @color_theme_two;
 	position: absolute;
-	top: 60px;
+	top: 6rem;
 	left: 25%;
 	z-index: 5;
+	padding: 4rem 5.5rem 3.5rem 5rem;
 }
 
 .info {
 	&:first-of-type {
-		margin-bottom: 30px;
+		margin-bottom: 3rem;
 	}
 
 	&:first-line {
 		font-weight: 700;
-		font-size: 24px;
+		font-size: 2.4rem;
 	}
 }
 
 /*Footer*/
 
-.copyright {
+.footer {
 	text-align: center;
-	color: @color_theme_two;
-	font-size: 16px;
 }
 
-.logo_copyright {
-	margin-top: 15px;
+.copyright {
+	color: @color_theme_two;
+	font-size: 1.6rem;
 }
+
+/*Screen*/
+
+@import 'screen.less';
