@@ -1,50 +1,9 @@
-/*Цвета*/
 
-.gradient(@color_start, @color_finish) {
-	
-	background: -webkit-linear-gradient(to top, @color_start, @color_finish);
-	background: -moz-linear-gradient(to top, @color_start, @color_finish);
-	background: -o-linear-gradient(to top, @color_start, @color_finish);
-	background: linear-gradient(to top, @color_start, @color_finish);
-}
-
-@color_tracing: #999;
-
-@color_tracing_name: #515151;
+@import (reference) "mixin.less";
 
 /*Подключаемые шрифты*/
 
-@font-face {
-    font-family: "PermianSerifRegular";
-    src: url("../fonts/PermianSerifRegular/PermianSerifRegular.eot");
-    src: url("../fonts/PermianSerifRegular/PermianSerifRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/PermianSerifRegular/PermianSerifRegular.woff") format("woff"),
-    url("../fonts/PermianSerifRegular/PermianSerifRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "PermianSerifBold";
-    src: url("../fonts/PermianSerifBold/PermianSerifBold.eot");
-    src: url("../fonts/PermianSerifBold/PermianSerifBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/PermianSerifBold/PermianSerifBold.woff") format("woff"),
-    url("../fonts/PermianSerifBold/PermianSerifBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "PermianSerifItalic";
-    src: url("../fonts/PermianSerifItalic/PermianSerifItalic.eot");
-    src: url("../fonts/PermianSerifItalic/PermianSerifItalic.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/PermianSerifItalic/PermianSerifItalic.woff") format("woff"),
-    url("../fonts/PermianSerifItalic/PermianSerifItalic.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font_style: italic;
+@import "fonts.less";
 
 *{
 	margin: 0;
@@ -76,37 +35,28 @@ h3 {
 
 /*Заголовки*/
 
-@font: 'PermianSerifTypeface';
-
 .title_small {
-	font-family: @font;
 	font-size: 12px;
-}
-
-.title_middle {
-	font-family: @font;
-	font-size: 16px;
 }
 
 .title {
 	font-family: @font;
-	font-size: 20px;
 	color: #000;
-	font-weight: 500;
+}
+
+.title_middle {
+	font-size: 20px;
 }
 
 .title_big {
-	font-family: @font;
 	font-size: 22px;
 }
 
 .title_large {
-	font-family: @font;
 	font-size: 25px;
 }
 
 .container {
-	
 	width: 980px;
 	margin: 0 auto;
 
@@ -137,7 +87,6 @@ h3 {
 }
 
 .lang_active {
-	
 	padding: 6px 3px;
     text-decoration: none;
     color: #fff;
@@ -169,7 +118,7 @@ h3 {
 	float: left;
 }
 
-.logo_item {
+.logo__item {
 	width: 95px;
 	font-size: 20px;
 	color: #449fd0;
@@ -181,7 +130,6 @@ h3 {
 /*контакты*/
 
 .contacts {
-	
 	float: right;
 	margin: 0 50px 0 0;
 	
@@ -192,20 +140,20 @@ h3 {
 	}
 }
 
-.phone_number {
+.phone-number {
 	float: right;
 	font-family: @font;
 	font-size: 36px;
 	color: #62aad2;
 }
 
-.contacts_hint {
+.contacts__hint {
 	float: right;
 	margin: 7px 14px 0 0;
 	text-align: right;
 }
 
-.contacts_hint_item {
+.contacts__hint_item {
 
 	font-style: @font_style;
 	font-size: 11px;
@@ -218,12 +166,12 @@ h3 {
 
 /*Навигация*/
 
-.header_menu {
+.header__menu {
 	float: right;
 	margin: 35px 0 0 0;
 }
 
-.menu_link {
+.menu__link {
 
 	margin-left: 24px;
 	font-family: PermianSerifTypeface;
@@ -238,31 +186,30 @@ h3 {
 
 /*Нижнее меню*/
 
-.bottom_menu {
+.bottom-menu {
 	padding: 30px 0 25px 0;
 	border-bottom: 1px groove rgba(136, 124, 124, 0.3);
 }
 
-.bottom_menu_title {
+.bottom-menu_title {
 	margin-bottom: 15px;
 	color: @color_tracing_name;
 }
 
-.bottom_menu_column {
+.bottom-menu__column {
 	width: 150px;
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 10px;
 }
 
-.bottom_list_item {
+.bottom-menu__list_item {
 	list-style-type: disc;
 	color: @color_tracing;
 	list-style-position: inside;
 }
 
-.bottom_link {
-
+.bottom__link {
 	text-decoration: none;
 	font-size: 11px;
 	color: @color_tracing;
@@ -294,12 +241,18 @@ h3 {
 	}
 }
 
-.banner_item {
+.banner__item {
 	background: url(../images/ambassador_massage.png) no-repeat;
 	width: 272px;
 	margin: 20px 0 0 144px;
 	float: right;
 	padding: 14px 0 10px 22px;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
 }
 
 /*сообщение*/
@@ -310,7 +263,7 @@ h3 {
 	float: right;
 }
 
-.ambassador_item {
+.ambassador__item {
 
 	font-family: PermianSerifTypeface;
 	font-size: 20px;
@@ -323,7 +276,7 @@ h3 {
 	}
 }
 
-.ambassador_massage {
+.ambassador__massage {
 	width: 250px;
 	line-height: 18px;
 }
@@ -355,12 +308,12 @@ h3 {
 	padding: 35px 0 50px 0;
 }
 
-.left_column {
+.left__column {
 	display: table-cell;
 	width: 671px;
 }
 
-.right_column {
+.right__column {
 	display: table-cell;
 	width: 306px;
 	padding-left: 30px;
@@ -380,23 +333,23 @@ h3 {
 	margin-right: 40px;
 }
 
-.news_main_column {
+.news__column_main {
 	padding-right: 50px;
 }
 
-.news_column {
+.news__column {
 	display: table-cell;
 	width: 300px;
 	padding-top: 15px;
 	line-height: 18px;
 }
 
-.news_main {
+.news__main {
 	font-weight: 500;
 	margin: 5px 0;
 }
 
-.news_link:hover {
+.news__link:hover {
 	color: #cc0000;
 }
 
@@ -409,12 +362,12 @@ h3 {
 	height: 264px;
 }
 
-.member_column {
+.member__column {
 	display: table-cell;
 	padding: 20px 20px 0 20px;
 }
 
-.member_item {
+.member__item {
 	width: 278px;
 	margin-bottom: 25px;
 
@@ -425,18 +378,18 @@ h3 {
 	}
 }
 
-.member_img {
+.member__img {
 	float: left;
 	margin-right: 13px;
 }
 
-.member_link {
+.member__link {
 	vertical-align: top;
 	display: block;
 	margin-bottom: 10px;
 }
 
-.member_description {
+.member__description {
 	color: #909090;
 	font-style: @font_style;
 	font-size: 10px;
@@ -454,7 +407,7 @@ h3 {
 	margin-bottom: 37px;
 }
 
-.small_item {
+.small-item {
 	width: 22px;
 	height: 22px;
 	display: inline-block;
@@ -465,7 +418,7 @@ h3 {
 	background: url(../images/facebook.jpg) no-repeat;
 }
 
-.social_post {
+.social__post {
 	margin-top: 15px;
 	line-height: 18px;
 }
@@ -480,8 +433,14 @@ h3 {
 
 /*Организаторы*/
 
-.organizers_item {
+.organizers__item {
 	padding: 15px 0 0 15px;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
 
 	&:nth-of-type(1) {
 		background: url(../images/organizer_background.png) no-repeat;
@@ -513,25 +472,29 @@ h3 {
 	float: left;
 }
 
-.organizers_name {
+.organizers__name {
 	font-size: 11px;
 	color: @color_tracing;
 	display: table-cell;
 	padding-top: 10px;
 }
 
+.organizers__name_padding {
+	padding: 0 0 0 5%;
+}
+
 .irp_group_title {
 	margin-bottom: 8px;
 }
 
-.irp_group_img {
+.irp-group__img {
 	background: url(../images/irp_group.png) no-repeat;
 	width: 121px;
 	height: 59px;
 	float: left;
 }
 
-.irp_group_name {
+.irp-group__name {
 	padding: 5px 0 0 13px;
 	color: @color_tracing_name;
 	display: table-cell;
@@ -553,8 +516,7 @@ h3 {
 	width: 642px;
 }
 
-.rules_panel {
-	
+.rules__panel {
 	&:after {
 		content: "";
 		clear: both;
@@ -566,7 +528,7 @@ h3 {
 	float: left;
 }
 
-.rules_labels {
+.rules__labels {
 	float: right;
 }
 
@@ -574,12 +536,12 @@ h3 {
 	margin-left: 20px;
 }
 
-.rules_list {
+.rules__list {
 	margin-top: 25px;
 	display: inline-block;
 }
 
-.rules_list_item {
+.rules__list_item {
 	margin-bottom: 10px;
 }
 
@@ -589,7 +551,7 @@ h3 {
 	display: table-cell;
 }
 
-.rules_list_info {
+.rules__list_info {
 	display: table-cell;
 	padding-left: 5px;
 	line-height: 18px;
@@ -608,18 +570,18 @@ h3 {
 	margin-bottom: 30px;
 }
 
-.partners_name {
+.partners__name {
 	display: inline-block;
 	margin-bottom: 30px;
 	text-align: center;
 	vertical-align: top;
 }
 
-.partners_logo {
+.partners__logo {
 	margin: 0 17px 30px 0;
 }
 
-.pairs_name {
+.pairs__name {
 	font-size: 10px;
 	color: #e5e5e5;
 	width: 140px;
@@ -640,18 +602,18 @@ h3 {
 	margin: 20px 0 0 0;
 	float: left;
 
-	.small_item {
+	.small-item {
 		width: 17px;
 		height: 17px;
 	}
 }
 
-.footer_massage {
+.footer__massage {
 	font-size: 11px;
 	margin: 20px 0 0 0;
 }
 
-.eastwood_lab {
+.eastwood-lab {
 	float: right;
 
 	&:a {
