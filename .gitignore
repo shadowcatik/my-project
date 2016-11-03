@@ -1,4 +1,4 @@
-*.ini
+﻿*.ini
 my_project/prepros.cfg
 *.psd
 *.cfg
@@ -6,5 +6,6 @@ my_project/prepros.cfg
 проект/psd/maket3.jpg
 проект/psd/maket.jpg
 мастерская_сувениров/psd/
+мастерская_сувениров/node_modules/
 test/psd/test.jpg
 test/psd/разметка.jpg

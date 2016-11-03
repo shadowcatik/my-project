@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Галерея авторских кукол">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {		
+			$('.fancybox').fancybox();
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+			/* Open manually */
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+		});
+	</script>
+	<title>Роспись кукол</title>
+</head>
+<body>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter37155635 = new Ya.Metrika({
+                    id:37155635,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/37155635" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	<div id="page">
+		<div class="top_menu">
+			<div class="container">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="button__menu_icon" id="show__menu" width="32" height="32" viewBox="0 0 32 32">
+					<path fill="#444" d="M8 8v4h16v-4h-16zM8 18h16v-4h-16v4zM8 24h16v-4h-16v4z"></path>
+				</svg>
+				<ul id="menu" class="menu">
+					<li class="menu_item">
+						<a href="index.html" data-content="Главная" class="menu_link">
+							Главная
+						</a>
+					</li>
+					<li class="menu_item" >				
+						<a href="gallery.html" data-content="Галерея" class="menu_link">
+							Галерея
+						</a>
+					</li>
+					<li class="menu_item">
+						<a href="#how_works" data-content="Как заказать" class="menu_link ">
+							Как заказать
+						</a>
+					</li>
+					<li class="menu_item">
+						<a href="#reviews" data-content="Отзывы" class="menu_link">
+							Отзывы
+						</a>
+					</li>		
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<header class="header">
+				<span class="header_layout">
+					Мастерская авторских сувениров
+				</span>
+				<h3 class="title title_large">
+					Сувениры от Татьяны
+				</h3>
+				<div class="contacts">
+					<div class="phone">
+						8 906-654-64-70
+					</div>
+					<a href="#" class="callback">
+						Заказать звонок
+					</a>
+					
+				</div>
+				<div class="b-callback" style="display: none">
+	                <div class="b-callback-inner">
+	                    <a class="b-callback-close" aria-label="Close">×</a>
+	                    <h4 class="b-callback-title">Заказать звонок</h4>
+			            <form class="callback-form">
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="name" required placeholder="Ваше имя"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell phone_mask" name="phone" required placeholder="Ваш телефон"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="email" required placeholder="Ваш Email"/>
+			              </div>
+			              <div class="b-callback-text-wrap">
+			                <input type="text" class="application_cell" name="time" placeholder="Удобное время для звонка"/>
+			              </div>
+			              <div class="b-callback-button-wrap">
+			                <input type="submit" class="b-callback-button" value="ПОЗВОНИТЬ МНЕ"/>
+			              </div>
+			            </form>
+	                </div>
+	            </div>
+	            <a href="https://vk.com/club41471980" class="button_contact">
+					<?xml version="1.0" encoding="utf-8"?>
+					<!-- Generated by IcoMoon.io -->
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="vk-ikon" width="35" height="32" viewBox="0 0 35 32">
+						<path d="M34.232 9.286q0.411 1.143-2.679 5.25-0.429 0.571-1.161 1.518-1.393 1.786-1.607 2.339-0.304 0.732 0.25 1.446 0.304 0.375 1.446 1.464h0.018l0.071 0.071q2.518 2.339 3.411 3.946 0.054 0.089 0.116 0.223t0.125 0.473-0.009 0.607-0.446 0.491-1.054 0.223l-4.571 0.071q-0.429 0.089-1-0.089t-0.929-0.393l-0.357-0.214q-0.536-0.375-1.25-1.143t-1.223-1.384-1.089-1.036-1.009-0.277q-0.054 0.018-0.143 0.063t-0.304 0.259-0.384 0.527-0.304 0.929-0.116 1.384q0 0.268-0.063 0.491t-0.134 0.33l-0.071 0.089q-0.321 0.339-0.946 0.393h-2.054q-1.268 0.071-2.607-0.295t-2.348-0.946-1.839-1.179-1.259-1.027l-0.446-0.429q-0.179-0.179-0.491-0.536t-1.277-1.625-1.893-2.696-2.188-3.768-2.33-4.857q-0.107-0.286-0.107-0.482t0.054-0.286l0.071-0.107q0.268-0.339 1.018-0.339l4.893-0.036q0.214 0.036 0.411 0.116t0.286 0.152l0.089 0.054q0.286 0.196 0.429 0.571 0.357 0.893 0.821 1.848t0.732 1.455l0.286 0.518q0.518 1.071 1 1.857t0.866 1.223 0.741 0.688 0.607 0.25 0.482-0.089q0.036-0.018 0.089-0.089t0.214-0.393 0.241-0.839 0.17-1.446 0-2.232q-0.036-0.714-0.161-1.304t-0.25-0.821l-0.107-0.214q-0.446-0.607-1.518-0.768-0.232-0.036 0.089-0.429 0.304-0.339 0.679-0.536 0.946-0.464 4.268-0.429 1.464 0.018 2.411 0.232 0.357 0.089 0.598 0.241t0.366 0.429 0.188 0.571 0.063 0.813-0.018 0.982-0.045 1.259-0.027 1.473q0 0.196-0.018 0.75t-0.009 0.857 0.063 0.723 0.205 0.696 0.402 0.438q0.143 0.036 0.304 0.071t0.464-0.196 0.679-0.616 0.929-1.196 1.214-1.92q1.071-1.857 1.911-4.018 0.071-0.179 0.179-0.313t0.196-0.188l0.071-0.054 0.089-0.045t0.232-0.054 0.357-0.009l5.143-0.036q0.696-0.089 1.143 0.045t0.554 0.295z"></path>
+					</svg>
+				</a>
+			</header>
+			<main class="content g-content">
+				<div class="container">
+					<h3 class="title title_big">
+						Куклы
+					</h3>
+					<div class="gallery wrapper">
+						<a class="gallery_item dolls fancybox-effects-c" href="images/dolls/vBUHJ1MPn3M.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/dolls/vBUHJ1MPn3M.jpg" alt="Кукла" />
+						</a>
+						<a class="gallery_item dolls fancybox-effects-c" href="images/dolls/riNhxtE_KEw.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/dolls/riNhxtE_KEw.jpg" alt="Кукла" />
+						</a>
+						<a class="gallery_item dolls fancybox-effects-c" href="images/dolls/mGHjZYcv628.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/dolls/mGHjZYcv628.jpg" alt="Кукла" />
+						</a>
+						<a class="gallery_item dolls fancybox-effects-c" href="images/dolls/CtPy_xYrqUU.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+							<img src="images/dolls/CtPy_xYrqUU.jpg" alt="Кукла" />
+						</a>
+						
+					</div>
+				</div>
+			</main>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<a href="http://f0002611.xsph.ru/" class="copyright">
+					Разработано Оксаной Мельник
+				</a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/main.js"></script>	
+</body>
+</html>
