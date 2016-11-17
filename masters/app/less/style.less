@@ -27,16 +27,19 @@ body {
 #page {
 	display: flex;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
     flex-flow: column wrap;
-    min-height: 100%;
+}
+
+.layout {
+   height: 100vh;
 }
 
 .container {
 	display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    flex: 1 1 0%;
+    flex: 1 0 auto;
     position: relative;
     padding: 5rem 0 2rem;
 }
