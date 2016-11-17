@@ -1,0 +1,41 @@
+/*шапка*/
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: relative;
+  padding: 3rem 0;
+}
+.header_layout {
+  width: 10rem;
+  line-height: 2.4rem;
+}
+.contacts {
+  width: 15rem;
+  position: relative;
+  text-align: right;
+}
+svg.vk-ikon {
+  fill: #503e58;
+}
+.phone {
+  font-family: 'LobsterRegular';
+  font-size: 2.2rem;
+  margin-bottom: .5rem;
+}
